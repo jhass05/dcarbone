@@ -45,7 +45,7 @@
     </tr>
     <% end %>
   <% else %>
-    <tr><td colspan="4">No existen productos</td></tr>
+    <tr><td colspan="4">No products to show in this view.</td></tr>
   <% end %>
   </table>
 

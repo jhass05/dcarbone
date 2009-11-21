@@ -1,14 +1,14 @@
 <div id="left">
-	<h1>Ver productos por categorias</h1>
+	<h1>View Products By Tag</h1>
 	<ul class="navigation secondary">
-    <li><a href="/admin/products/list/">Regresar a la lista de productos</a></li>
+    <li><a href="/admin/products/list/">Back to Product List</a></li>
   </ul>
 	<!-- View products by tag -->
 	<ul id="view_tags">
 		<% if @tags.length > 0 %>
 			<%= render(:partial => 'tag_list_view_item', :collection => @tags) %>
 		<% else %>
-			<li>No hay categorias creadas aun</li>
+			<li>No Tags have been created yet</li>
 		<% end %>
 	</ul>
 </div>

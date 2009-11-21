@@ -2,7 +2,7 @@
 	IMAGES ######################################################################
 -->
 
-<h1>Imagenes</h1>
+<h1>Images</h1>
 <div class="padLeft">
 	<% if @product.images.length > 0 then %>
 		<p>
