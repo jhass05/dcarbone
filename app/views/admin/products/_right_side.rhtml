@@ -4,15 +4,19 @@
 	<%= link_to 'Crear Nuevo Producto', {:action => 'new'}, :class => 'button hundredfifty' %>
 	<div class="clear">&nbsp;</div>
 
-	<h1>Search All Products</h1>
+	<h1>Buscar Productos</h1>
 	<%= form_tag :controller => 'products', :action => 'search' %>
-	  <input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" /> <%= submit_tag('Go', {:class => 'button fifty'}) %>
+<<<<<<< HEAD:app/views/admin/products/_right_side.rhtml
+	<input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" /> 	<%= submit_tag('Buscar', {:class => 'button fifty'}) %>
+=======
+	  <input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" /> <%= submit_tag('Buscar', {:class => 'button fifty'}) %>
+>>>>>>> nilton:app/views/admin/products/_right_side.rhtml
 	  <div class="clear info">&nbsp;</div>
 	  <span class="info">Nombre producto,Codigo o descripcion</span>
 
 	</form>
 
-<script language="javascript" type="text/javascript">
+<script language="javasc<div>ript" type="text/javascript">
 	// Called when closing the Tag edit dialog box
 	// Fires off a request for rendering the partial in our list box
 	//
@@ -25,7 +29,11 @@
 
   <h1 style="margin-top:20px;">Tagging</h1>
 	<p>
-		<a href="/admin/tags/list" class="action">Administrar Categorias</a> - <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a>
+<<<<<<< HEAD:app/views/admin/products/_right_side.rhtml
+		<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div> - <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a></div>
+=======
+		<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div>- <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a></div>
+>>>>>>> nilton:app/views/admin/products/_right_side.rhtml
 	</p>
 	<p>
 		<a href="/admin/products/list_tags">Ver Productos por Categoria...</a>
