@@ -12,7 +12,7 @@
 
 	</form>
 
-<script language="javascript" type="text/javascript">
+<script language="javasc<div>ript" type="text/javascript">
 	// Called when closing the Tag edit dialog box
 	// Fires off a request for rendering the partial in our list box
 	//
@@ -25,7 +25,11 @@
 
   <h1 style="margin-top:20px;">Tagging</h1>
 	<p>
+<<<<<<< HEAD:app/views/admin/products/_right_side.rhtml~
 		<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div> - <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a></div>
+=======
+		<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div>- <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a></div>
+>>>>>>> nilton:app/views/admin/products/_right_side.rhtml~
 	</p>
 	<p>
 		<a href="/admin/products/list_tags">Ver Productos por Categoria...</a>
