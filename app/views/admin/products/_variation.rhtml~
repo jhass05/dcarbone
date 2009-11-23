@@ -11,15 +11,15 @@
 		<%= text_field_tag('variation[][code]', variation.code, :size => 10, :class => 'textInput') %>
 	</div>
 	<div class="float">
-		<%= make_label('Precio') %>
+		<%= make_label('Price') %>
 		<%= text_field_tag('variation[][price]', variation.price, :size => 6, :class => 'textInput numeric') %>
 	</div>
 	<div class="float">
-		<%= make_label('Cantidad') %>
+		<%= make_label('Quantity') %>
 		<%= text_field_tag('variation[][quantity]', variation.quantity, :size => 6, :class => 'textInput numeric') %>
 	</div>
 	<div class="float">
-		<%= make_label('Peso') %>
+		<%= make_label('Weight') %>
 		<%= text_field_tag('variation[][weight]', variation.weight, :size => 6, :class => 'textInput numeric') %>
 		<br/>
 		<span class="info">(pounds)</span>
