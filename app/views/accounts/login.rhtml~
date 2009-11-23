@@ -23,7 +23,7 @@
   </p>
 
   <p>
-    <input type="submit" name="login" value="Aceptar" class="button eighty" />
+    <input type="submit" name="aceptar" value="Login" class="button eighty" />
   </p>
 
 

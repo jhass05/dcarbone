@@ -40,7 +40,7 @@
 	<div id="navigation">
 		<ul class="navigation">
 			<li class="<%= @cname == 'orders' ? 'active' : '' %>">
-				<a href="/admin/orders">Ordenes</a>
+				<a href="/admin/orders">Orders</a>
 			</li>
 			<li class="<%= @cname == 'products' ? 'active' : '' %>">
 				<%= link_to_section "Productos", :controller=>"/admin/products" rescue nil %>
@@ -70,10 +70,10 @@
 			  <br/>
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>
-			<a href="/">Sitio Publico</a> -
+			<a href="/">Public site</a> -
 			<a href="/admin/preferences/">Preferencias</a> - 
-			<a href="http://code.google.com/p/substruct/wiki/HelpUsage" class="submodal-800-600">Ayuda en linea</a> -
-			<a href="http://dev.subimage.com/projects/substruct/">About Substruct</a>
+			<a href="http://code.google.com/p/substruct/wiki/HelpUsage" class="submodal-800-600">Ayuda</a> -
+			<a href="http://dev.subimage.com/projects/substruct/">Acerca el Carbonazo</a>
 		</div>
 	</div>
 

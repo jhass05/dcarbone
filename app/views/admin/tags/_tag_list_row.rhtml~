@@ -45,7 +45,7 @@
 				)
 			%>
 			<br/>
-			<span class="info"><%= pluralize(tag_list_row.children.size, 'tag') %> abajo</span>
+			<span class="info"><%= pluralize(tag_list_row.children.size, 'tag') %> dentro</span>
 		<% else %>
 			<%= tag_list_row.name %>
 		<% end %>

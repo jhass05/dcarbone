@@ -55,7 +55,7 @@ class Admin::TagsController < Admin::BaseController
 		@tag.name = params[:name]
     if !@tag.save
       render(:update) do |page| 
-        page.alert "Algo anda mal guardando tu categoria.\n\nRecuerda, los nombres de las categorias deben ser unicos."
+        page.alert "Something went wrong saving your tag.\n\nRemember, tag names have to be unique."
       end
     else
       render(:update) do |page| 

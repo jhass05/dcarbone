@@ -134,7 +134,7 @@
 		<% if !@parent_tag %>
 			Top Level Tags
 		<% else %>
-			<a href="/admin/tags/list">Lista de categorias</a> &gt; 
+			<a href="/admin/tags/list">Top Level Tags</a> &gt; 
 			<% if @parent_tag.parent %>
 				<%= link_to(@parent_tag.parent.name, :action => 'list', :id => @parent_tag.parent.name ) %> &gt;
 			<% end %>
@@ -146,7 +146,7 @@
 	<ul id="tag_list" class="sortable">
 		<%= render(:partial => 'tag_list_row', :collection => @tags) %>
 	</ul>
-	<div id="no_tags_row" style="display:<%= @tags.size > 0 ? 'none' : '' %>;">No existen categorias...</div>
+	<div id="no_tags_row" style="display:<%= @tags.size > 0 ? 'none' : '' %>;">No tags to show...</div>
 	<%= 
 		sortable_element(
 			'tag_list',
@@ -158,8 +158,8 @@
 <div id="right">
 	<%= render :partial => '/admin/preferences/sidebar' %>
 		
-	<h1>Ayuda</h1>
-	<h3>Grupos de categoria</h3>
+	<h1>Help</h1>
+	<h3>Tag Groups</h3>
 	<p><span class="hlt">
 		You may group tags two levels deep.
 	</span></p>
