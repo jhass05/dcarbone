@@ -13,7 +13,11 @@
 		</div>
 		<div class="float">
 			<%= make_label('Codigo Producto', true) %>
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml~
 			<%= text_field 'product', 'code', :class => 'textInput', :size => 10 %>
+=======
+			<%= text_field 'product', 'code', :class => 'textInput', :size => 14 %>
+>>>>>>> e9bd5a152fa5879c98628ddbb856a0d10d2fcdcb:app/views/admin/products/_form.rhtml~
 		</div>
 		<div class="float">
 			<%= make_label('Precio') %>
