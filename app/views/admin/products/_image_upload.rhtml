@@ -6,9 +6,9 @@
 <div class="padLeft">
 	<% if @product.images.length > 0 then %>
 		<p>
-			Drag and drop images to set their order on the item page.
+			Arrastra las imagenes para establecer el orden.
 			<br/>
-			<span class="hlt">The image listed first will be the default.</span>
+			<span class="hlt">La primera imagen mostrada sera la por defecto.</span>
 		</p>
 		<p class="info">
 			If you don't see an image it means the path is broken or doesn't exist any longer.
@@ -53,10 +53,10 @@
 			) 
 		%>
 	<% else %>
-		This product has no images associated with it currently.
+		Este producto no tiene imagenes asociadas actualmente.
 	<% end %>
 	
-	<h4>Upload</h4>
+	<h4>Subir</h4>
 	<%= 
 		render :partial => '/shared/multiple_upload',
 			:locals => {
