@@ -11,7 +11,7 @@
 <h1>Categorizar este producto</h1>
 
 <p>
-	<a href="/admin/tags/list" class="action">Administrar Categorias</a> - <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que es una categoria?</a>
+	<a href="/admin/tags/list" class="action">Administrar Categorias</a><div>- <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que es una categoria?</a></div>
 </p>
 
 
@@ -53,7 +53,8 @@
 <!-- 
 	RELATED PRODUCTS ############################################################
 -->
-<h1>Related Products</h1>
+ <!--
+<h1>Productos Relacionados</h1>
 <%
 	i = 0
 	for relative in @product.related_products do
@@ -68,7 +69,7 @@
 <span class="info">
 	Type in the product name or code here. It will be auto-completed for you.
 </span>
-
+-->
 </div>
 <div class="clear">&nbsp;</div>
 
