@@ -23633,3 +23633,520 @@ Processing ProductsController#update_image_rank_ajax (for 127.0.0.1 at 2009-11-2
   [4;36;1mProductImage Update (0.000825)[0m   [0;1mUPDATE `product_images` SET `rank` = 1 WHERE `id` = 2[0m
   [4;35;1mSQL (0.037829)[0m   [0mCOMMIT[0m
 Completed in 0.54452 (1 reqs/sec) | Rendering: 0.02288 (4%) | DB: 0.14953 (27%) | 200 OK [http://localhost/admin/products/update_image_rank_ajax/1258810845]
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+(file not found in application)
+checking plugin 'engines' for 'admin/products_controller'
+checking plugin 'active_merchant' for 'admin/products_controller'
+checking plugin 'acts_as_tree' for 'admin/products_controller'
+checking plugin 'ar_fixtures' for 'admin/products_controller'
+checking plugin 'attachment_fu' for 'admin/products_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_controller'
+checking plugin 'substruct' for 'admin/products_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_controller'
+checking plugin 'active_merchant' for 'admin/base_controller'
+checking plugin 'acts_as_tree' for 'admin/base_controller'
+checking plugin 'ar_fixtures' for 'admin/base_controller'
+checking plugin 'attachment_fu' for 'admin/base_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_controller'
+checking plugin 'substruct' for 'admin/base_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_helper'
+checking plugin 'active_merchant' for 'admin/base_helper'
+checking plugin 'acts_as_tree' for 'admin/base_helper'
+checking plugin 'ar_fixtures' for 'admin/base_helper'
+checking plugin 'attachment_fu' for 'admin/base_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_helper'
+checking plugin 'substruct' for 'admin/base_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'admin/base_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/base_controller'
+loading from application: admin/base_controller
+checking plugin 'engines' for 'admin/products_helper'
+checking plugin 'active_merchant' for 'admin/products_helper'
+checking plugin 'acts_as_tree' for 'admin/products_helper'
+checking plugin 'ar_fixtures' for 'admin/products_helper'
+checking plugin 'attachment_fu' for 'admin/products_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_helper'
+checking plugin 'substruct' for 'admin/products_helper'
+checking plugin 'will_paginate' for 'admin/products_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/products_controller'
+loading from application: admin/products_controller
+
+
+Processing ProductsController#update_image_rank_ajax (for 127.0.0.1 at 2009-11-23 14:52:03) [POST]
+  Session ID: 5069ac5404b56674f960746314535b11
+  Parameters: {"image_list"=>["4", "1"], "action"=>"update_image_rank_ajax", "id"=>"1258810845", "controller"=>"admin/products"}
+  [4;36;1mPreference Columns (0.039078)[0m   [0;1mSHOW FIELDS FROM `preferences`[0m
+  [4;35;1mPreference Load (0.000367)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.`name` = 'store_name') LIMIT 1[0m
+  [4;36;1mTag Load (0.000347)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mOrderUser Columns (0.002100)[0m   [0mSHOW FIELDS FROM `order_users`[0m
+  [4;36;1mOrderUser Load (0.000430)[0m   [0;1mSELECT * FROM `order_users` WHERE (`order_users`.`id` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.001801)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000265)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJoin Table Columns (0.001665)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.000279)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mRole Columns (0.001693)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mJoin Table Columns (0.001723)[0m   [0;1mSHOW FIELDS FROM `rights_roles`[0m
+  [4;35;1mRight Load (0.000311)[0m   [0mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mRight Columns (0.001758)[0m   [0;1mSHOW FIELDS FROM `rights`[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJoin Table Columns (0.001633)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mJoin Table Columns (0.001618)[0m   [0;1mSHOW FIELDS FROM `rights_roles`[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+{"image_list"=>["4", "1"], "action"=>"update_image_rank_ajax", "id"=>"1258810845", "controller"=>"admin/products"}
+  [4;36;1mProductImage Load (0.001139)[0m   [0;1mSELECT * FROM `product_images` WHERE (image_id = '4' AND product_id = '1258810845') LIMIT 1[0m
+  [4;35;1mProductImage Columns (0.001812)[0m   [0mSHOW FIELDS FROM `product_images`[0m
+  [4;36;1mSQL (0.000334)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductImage Update (0.000971)[0m   [0mUPDATE `product_images` SET `rank` = 0 WHERE `id` = 2[0m
+  [4;36;1mSQL (0.079859)[0m   [0;1mCOMMIT[0m
+  [4;35;1mProductImage Load (0.000952)[0m   [0mSELECT * FROM `product_images` WHERE (image_id = '1' AND product_id = '1258810845') LIMIT 1[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductImage Update (0.000774)[0m   [0mUPDATE `product_images` SET `rank` = 1 WHERE `id` = 1[0m
+  [4;36;1mSQL (0.084380)[0m   [0;1mCOMMIT[0m
+Completed in 0.71584 (1 reqs/sec) | Rendering: 0.02197 (3%) | DB: 0.56009 (78%) | 200 OK [http://localhost/admin/products/update_image_rank_ajax/1258810845]
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+(file not found in application)
+checking plugin 'engines' for 'admin/products_controller'
+checking plugin 'active_merchant' for 'admin/products_controller'
+checking plugin 'acts_as_tree' for 'admin/products_controller'
+checking plugin 'ar_fixtures' for 'admin/products_controller'
+checking plugin 'attachment_fu' for 'admin/products_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_controller'
+checking plugin 'substruct' for 'admin/products_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_controller'
+checking plugin 'active_merchant' for 'admin/base_controller'
+checking plugin 'acts_as_tree' for 'admin/base_controller'
+checking plugin 'ar_fixtures' for 'admin/base_controller'
+checking plugin 'attachment_fu' for 'admin/base_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_controller'
+checking plugin 'substruct' for 'admin/base_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_helper'
+checking plugin 'active_merchant' for 'admin/base_helper'
+checking plugin 'acts_as_tree' for 'admin/base_helper'
+checking plugin 'ar_fixtures' for 'admin/base_helper'
+checking plugin 'attachment_fu' for 'admin/base_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_helper'
+checking plugin 'substruct' for 'admin/base_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'admin/base_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/base_controller'
+loading from application: admin/base_controller
+checking plugin 'engines' for 'admin/products_helper'
+checking plugin 'active_merchant' for 'admin/products_helper'
+checking plugin 'acts_as_tree' for 'admin/products_helper'
+checking plugin 'ar_fixtures' for 'admin/products_helper'
+checking plugin 'attachment_fu' for 'admin/products_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_helper'
+checking plugin 'substruct' for 'admin/products_helper'
+checking plugin 'will_paginate' for 'admin/products_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/products_controller'
+loading from application: admin/products_controller
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2009-11-23 14:52:05) [GET]
+  Session ID: 5069ac5404b56674f960746314535b11
+  Parameters: {"action"=>"edit", "id"=>"1258810845", "controller"=>"admin/products"}
+  [4;35;1mPreference Columns (0.001925)[0m   [0mSHOW FIELDS FROM `preferences`[0m
+  [4;36;1mPreference Load (0.000324)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.`name` = 'store_name') LIMIT 1[0m
+  [4;35;1mTag Load (0.000339)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mOrderUser Columns (0.002046)[0m   [0;1mSHOW FIELDS FROM `order_users`[0m
+  [4;35;1mOrderUser Load (0.000333)[0m   [0mSELECT * FROM `order_users` WHERE (`order_users`.`id` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.001798)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000277)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJoin Table Columns (0.001673)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.000302)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mRole Columns (0.001645)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mJoin Table Columns (0.002007)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mRight Load (0.000298)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mRight Columns (0.001769)[0m   [0mSHOW FIELDS FROM `rights`[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJoin Table Columns (0.002023)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mJoin Table Columns (0.001816)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mProduct Columns (0.002938)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mProduct Load (0.000387)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1258810845) AND ( (`items`.`type` = 'Product' ) ) [0m
+  [4;35;1mImage Columns (0.002239)[0m   [0mSHOW FIELDS FROM `user_uploads`[0m
+Rendering template within layouts/admin
+Rendering admin/products/edit
+  [4;36;1mVariation Columns (0.002559)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT count(*) AS count_all FROM `items` WHERE (`items`.product_id = 1258810845) AND ( (`items`.`type` = 'Variation' ) ) [0m
+  [4;36;1mImage Load (0.048546)[0m   [0;1mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_images ON user_uploads.id = product_images.image_id WHERE ((`product_images`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Image' ) ) ORDER BY -product_images.rank DESC[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_images ON user_uploads.id = product_images.image_id WHERE ((`product_images`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Image' ) ) ORDER BY -product_images.rank DESC[0m
+Rendered shared/_multiple_upload (0.00012)
+Rendered admin/products/_image_upload (0.08414)
+  [4;36;1mDownload Columns (0.002320)[0m   [0;1mSHOW FIELDS FROM `user_uploads`[0m
+  [4;35;1mDownload Load (0.000352)[0m   [0mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_downloads ON user_uploads.id = product_downloads.download_id WHERE ((`product_downloads`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Download' ) ) ORDER BY -product_downloads.rank DESC[0m
+Rendered shared/_multiple_upload (0.00012)
+Rendered admin/products/_product_upload (0.05460)
+Rendered admin/products/_form (0.18597)
+  [4;36;1mTag Columns (0.001892)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Exists (0.000281)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 1) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 1) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mTag Load (0.000341)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.parent_id = 1) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.01397)
+  [4;36;1mTag Exists (0.000320)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 2) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 2) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mTag Load (0.000299)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.parent_id = 2) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.00630)
+  [4;35;1mTag Exists (0.000380)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 3) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 3) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mTag Load (0.000573)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.parent_id = 3) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.00698)
+  [4;36;1mJoin Table Columns (0.001836)[0m   [0;1mSHOW FIELDS FROM `related_products`[0m
+  [4;35;1mProduct Load (0.000315)[0m   [0mSELECT * FROM `items` INNER JOIN `related_products` ON `items`.id = `related_products`.related_id WHERE (`related_products`.product_id = 1258810845 ) AND ( (`items`.`type` = 'Product' ) ) [0m
+Rendered admin/products/_relative (0.00024)
+Rendered admin/products/_relative (0.00015)
+Rendered admin/products/_relative (0.00015)
+Rendered admin/products/_relative (0.00014)
+Rendered admin/products/_relative (0.00014)
+Rendered admin/products/_crud_right (0.03838)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 0.75273 (1 reqs/sec) | Rendering: 0.18207 (24%) | DB: 0.12830 (17%) | 200 OK [http://localhost/admin/products/edit/1258810845]
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+(file not found in application)
+checking plugin 'engines' for 'admin/products_controller'
+checking plugin 'active_merchant' for 'admin/products_controller'
+checking plugin 'acts_as_tree' for 'admin/products_controller'
+checking plugin 'ar_fixtures' for 'admin/products_controller'
+checking plugin 'attachment_fu' for 'admin/products_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_controller'
+checking plugin 'substruct' for 'admin/products_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_controller'
+checking plugin 'active_merchant' for 'admin/base_controller'
+checking plugin 'acts_as_tree' for 'admin/base_controller'
+checking plugin 'ar_fixtures' for 'admin/base_controller'
+checking plugin 'attachment_fu' for 'admin/base_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_controller'
+checking plugin 'substruct' for 'admin/base_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_helper'
+checking plugin 'active_merchant' for 'admin/base_helper'
+checking plugin 'acts_as_tree' for 'admin/base_helper'
+checking plugin 'ar_fixtures' for 'admin/base_helper'
+checking plugin 'attachment_fu' for 'admin/base_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_helper'
+checking plugin 'substruct' for 'admin/base_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'admin/base_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/base_controller'
+loading from application: admin/base_controller
+checking plugin 'engines' for 'admin/products_helper'
+checking plugin 'active_merchant' for 'admin/products_helper'
+checking plugin 'acts_as_tree' for 'admin/products_helper'
+checking plugin 'ar_fixtures' for 'admin/products_helper'
+checking plugin 'attachment_fu' for 'admin/products_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_helper'
+checking plugin 'substruct' for 'admin/products_helper'
+checking plugin 'will_paginate' for 'admin/products_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/products_controller'
+loading from application: admin/products_controller
+
+
+Processing ProductsController#suggestion_js (for 127.0.0.1 at 2009-11-23 14:52:08) [GET]
+  Session ID: 5069ac5404b56674f960746314535b11
+  Parameters: {"action"=>"suggestion_js", "controller"=>"admin/products"}
+  [4;35;1mPreference Columns (0.001822)[0m   [0mSHOW FIELDS FROM `preferences`[0m
+  [4;36;1mPreference Load (0.000340)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.`name` = 'store_name') LIMIT 1[0m
+  [4;35;1mTag Load (0.000333)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mOrderUser Columns (0.002506)[0m   [0;1mSHOW FIELDS FROM `order_users`[0m
+  [4;35;1mOrderUser Load (0.000323)[0m   [0mSELECT * FROM `order_users` WHERE (`order_users`.`id` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.000857)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000126)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJoin Table Columns (0.000798)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.000131)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mRole Columns (0.000871)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mJoin Table Columns (0.001867)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mRight Load (0.000154)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mRight Columns (0.000782)[0m   [0mSHOW FIELDS FROM `rights`[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJoin Table Columns (0.000806)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mJoin Table Columns (0.000775)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mProduct Columns (0.001234)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mProduct Load (0.000161)[0m   [0;1mSELECT * FROM `items` WHERE ( (`items`.`type` = 'Product' ) ) [0m
+Rendering admin/products/suggestion_js
+Completed in 0.39512 (2 reqs/sec) | Rendering: 0.00475 (1%) | DB: 0.07341 (18%) | 200 OK [http://localhost/admin/products/suggestion_js]
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+(file not found in application)
+checking plugin 'engines' for 'admin/products_controller'
+checking plugin 'active_merchant' for 'admin/products_controller'
+checking plugin 'acts_as_tree' for 'admin/products_controller'
+checking plugin 'ar_fixtures' for 'admin/products_controller'
+checking plugin 'attachment_fu' for 'admin/products_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_controller'
+checking plugin 'substruct' for 'admin/products_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_controller'
+checking plugin 'active_merchant' for 'admin/base_controller'
+checking plugin 'acts_as_tree' for 'admin/base_controller'
+checking plugin 'ar_fixtures' for 'admin/base_controller'
+checking plugin 'attachment_fu' for 'admin/base_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_controller'
+checking plugin 'substruct' for 'admin/base_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_helper'
+checking plugin 'active_merchant' for 'admin/base_helper'
+checking plugin 'acts_as_tree' for 'admin/base_helper'
+checking plugin 'ar_fixtures' for 'admin/base_helper'
+checking plugin 'attachment_fu' for 'admin/base_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_helper'
+checking plugin 'substruct' for 'admin/base_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'admin/base_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/base_controller'
+loading from application: admin/base_controller
+checking plugin 'engines' for 'admin/products_helper'
+checking plugin 'active_merchant' for 'admin/products_helper'
+checking plugin 'acts_as_tree' for 'admin/products_helper'
+checking plugin 'ar_fixtures' for 'admin/products_helper'
+checking plugin 'attachment_fu' for 'admin/products_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_helper'
+checking plugin 'substruct' for 'admin/products_helper'
+checking plugin 'will_paginate' for 'admin/products_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/products_controller'
+loading from application: admin/products_controller
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2009-11-23 14:52:45) [GET]
+  Session ID: 5069ac5404b56674f960746314535b11
+  Parameters: {"action"=>"edit", "id"=>"1258810845", "controller"=>"admin/products"}
+  [4;35;1mPreference Columns (0.001990)[0m   [0mSHOW FIELDS FROM `preferences`[0m
+  [4;36;1mPreference Load (0.000377)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.`name` = 'store_name') LIMIT 1[0m
+  [4;35;1mTag Load (0.000492)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mOrderUser Columns (0.002226)[0m   [0;1mSHOW FIELDS FROM `order_users`[0m
+  [4;35;1mOrderUser Load (0.000309)[0m   [0mSELECT * FROM `order_users` WHERE (`order_users`.`id` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.001840)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000259)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJoin Table Columns (0.001798)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.000303)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mRole Columns (0.001676)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mJoin Table Columns (0.001735)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mRight Load (0.000278)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mRight Columns (0.001903)[0m   [0mSHOW FIELDS FROM `rights`[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJoin Table Columns (0.001687)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mJoin Table Columns (0.001671)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mProduct Columns (0.002865)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mProduct Load (0.000352)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1258810845) AND ( (`items`.`type` = 'Product' ) ) [0m
+  [4;35;1mImage Columns (0.002285)[0m   [0mSHOW FIELDS FROM `user_uploads`[0m
+Rendering template within layouts/admin
+Rendering admin/products/edit
+  [4;36;1mVariation Columns (0.002720)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT count(*) AS count_all FROM `items` WHERE (`items`.product_id = 1258810845) AND ( (`items`.`type` = 'Variation' ) ) [0m
+  [4;36;1mImage Load (0.000413)[0m   [0;1mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_images ON user_uploads.id = product_images.image_id WHERE ((`product_images`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Image' ) ) ORDER BY -product_images.rank DESC[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_images ON user_uploads.id = product_images.image_id WHERE ((`product_images`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Image' ) ) ORDER BY -product_images.rank DESC[0m
+Rendered shared/_multiple_upload (0.00015)
+Rendered admin/products/_image_upload (0.03442)
+  [4;36;1mDownload Columns (0.002325)[0m   [0;1mSHOW FIELDS FROM `user_uploads`[0m
+  [4;35;1mDownload Load (0.000284)[0m   [0mSELECT `user_uploads`.* FROM `user_uploads` INNER JOIN product_downloads ON user_uploads.id = product_downloads.download_id WHERE ((`product_downloads`.product_id = 1258810845)) AND ( (`user_uploads`.`type` = 'Download' ) ) ORDER BY -product_downloads.rank DESC[0m
+Rendered shared/_multiple_upload (0.00017)
+Rendered admin/products/_product_upload (0.23919)
+Rendered admin/products/_form (0.32432)
+  [4;36;1mTag Columns (0.001898)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Exists (0.000484)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 1) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 1) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mTag Load (0.000304)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.parent_id = 1) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.01493)
+  [4;36;1mTag Exists (0.000341)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 2) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 2) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mTag Load (0.000304)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.parent_id = 2) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.00599)
+  [4;35;1mTag Exists (0.000266)[0m   [0mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 3) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `tags`.id FROM `tags` INNER JOIN `products_tags` ON `tags`.id = `products_tags`.tag_id WHERE (`tags`.`id` = 3) AND (`products_tags`.product_id = 1258810845 ) LIMIT 1[0m
+  [4;35;1mTag Load (0.000299)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.parent_id = 3) ORDER BY -rank DESC[0m
+Rendered admin/products/_tag_list_form_row (0.00612)
+  [4;36;1mJoin Table Columns (0.001779)[0m   [0;1mSHOW FIELDS FROM `related_products`[0m
+  [4;35;1mProduct Load (0.000299)[0m   [0mSELECT * FROM `items` INNER JOIN `related_products` ON `items`.id = `related_products`.related_id WHERE (`related_products`.product_id = 1258810845 ) AND ( (`items`.`type` = 'Product' ) ) [0m
+Rendered admin/products/_relative (0.00027)
+Rendered admin/products/_relative (0.00019)
+Rendered admin/products/_relative (0.00016)
+Rendered admin/products/_relative (0.00015)
+Rendered admin/products/_relative (0.00009)
+Rendered admin/products/_crud_right (0.03808)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 0.64051 (1 reqs/sec) | Rendering: 0.36266 (56%) | DB: 0.10386 (16%) | 200 OK [http://localhost/admin/products/edit/1258810845]
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+(file not found in application)
+checking plugin 'engines' for 'admin/products_controller'
+checking plugin 'active_merchant' for 'admin/products_controller'
+checking plugin 'acts_as_tree' for 'admin/products_controller'
+checking plugin 'ar_fixtures' for 'admin/products_controller'
+checking plugin 'attachment_fu' for 'admin/products_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_controller'
+checking plugin 'substruct' for 'admin/products_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_controller'
+checking plugin 'active_merchant' for 'admin/base_controller'
+checking plugin 'acts_as_tree' for 'admin/base_controller'
+checking plugin 'ar_fixtures' for 'admin/base_controller'
+checking plugin 'attachment_fu' for 'admin/base_controller'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_controller'
+checking plugin 'substruct' for 'admin/base_controller'
+==> loading from plugin 'substruct'
+checking plugin 'engines' for 'admin/base_helper'
+checking plugin 'active_merchant' for 'admin/base_helper'
+checking plugin 'acts_as_tree' for 'admin/base_helper'
+checking plugin 'ar_fixtures' for 'admin/base_helper'
+checking plugin 'attachment_fu' for 'admin/base_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/base_helper'
+checking plugin 'substruct' for 'admin/base_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'admin/base_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/base_controller'
+loading from application: admin/base_controller
+checking plugin 'engines' for 'admin/products_helper'
+checking plugin 'active_merchant' for 'admin/products_helper'
+checking plugin 'acts_as_tree' for 'admin/products_helper'
+checking plugin 'ar_fixtures' for 'admin/products_helper'
+checking plugin 'attachment_fu' for 'admin/products_helper'
+checking plugin 'attachment_fu_fixtures' for 'admin/products_helper'
+checking plugin 'substruct' for 'admin/products_helper'
+checking plugin 'will_paginate' for 'admin/products_helper'
+(file not found in application)
+checking plugin 'will_paginate' for 'admin/products_controller'
+loading from application: admin/products_controller
+
+
+Processing ProductsController#suggestion_js (for 127.0.0.1 at 2009-11-23 14:52:47) [GET]
+  Session ID: 5069ac5404b56674f960746314535b11
+  Parameters: {"action"=>"suggestion_js", "controller"=>"admin/products"}
+  [4;35;1mPreference Columns (0.001069)[0m   [0mSHOW FIELDS FROM `preferences`[0m
+  [4;36;1mPreference Load (0.000160)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.`name` = 'store_name') LIMIT 1[0m
+  [4;35;1mTag Load (0.000162)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mOrderUser Columns (0.001087)[0m   [0;1mSHOW FIELDS FROM `order_users`[0m
+  [4;35;1mOrderUser Load (0.000161)[0m   [0mSELECT * FROM `order_users` WHERE (`order_users`.`id` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.001007)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000145)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJoin Table Columns (0.000923)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.000162)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;36;1mRole Columns (0.000824)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mJoin Table Columns (0.000869)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mRight Load (0.000146)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mRight Columns (0.000890)[0m   [0mSHOW FIELDS FROM `rights`[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJoin Table Columns (0.000887)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) ORDER BY name ASC[0m
+  [4;35;1mJoin Table Columns (0.001122)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `rights` INNER JOIN `rights_roles` ON `rights`.id = `rights_roles`.right_id WHERE (`rights_roles`.role_id = 1 ) ORDER BY name ASC[0m
+[AUTH] content_nodes - *
+[AUTH] files - *
+[AUTH] orders - *
+[AUTH] preferences - *
+[AUTH] products - *
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `tags` WHERE (parent_id IS NULL OR parent_id = 0) ORDER BY -rank DESC[0m
+  [4;35;1mProduct Columns (0.001344)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mProduct Load (0.000144)[0m   [0;1mSELECT * FROM `items` WHERE ( (`items`.`type` = 'Product' ) ) [0m
+Rendering admin/products/suggestion_js
+Completed in 0.11457 (8 reqs/sec) | Rendering: 0.00535 (4%) | DB: 0.15178 (132%) | 200 OK [http://localhost/admin/products/suggestion_js]
