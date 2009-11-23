@@ -2,7 +2,7 @@
 	DOWNLOADS ######################################################################
 -->
 
-<!--<h1>Downloads</h1>
+<h1>Downloads</h1>
 <div class="padLeft">
 	<p class="info">
 	  These are digital items that customers may purchase.
@@ -44,4 +44,4 @@
 				:input_size => '30'
 			}
 	%>
-</div>-->
+</div>
