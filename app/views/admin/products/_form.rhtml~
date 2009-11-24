@@ -8,21 +8,23 @@
 	<h2>Producto</h2>
 	<div class="padLeft">
 		<div class="float">
-			<%= make_label('Name', true) %>
+			<%= make_label('Nombre', true) %>
 			<%= text_field 'product', 'name', :class => 'textInput', :size => 30  %>
 		</div>
 		<div class="float">
-			<%= make_label('Product Code', true) %>
-			<%= text_field 'product', 'code', :class => 'textInput', :size => 10 %>
+			<%= make_label('Codigo Producto', true) %>
+			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
 		</div>
 		<div class="float">
-			<%= make_label('Price') %>
+			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
-		<div class="float">
+	<!--
+	    <div class="float">
 			<%= make_label('Quantity') %>
 			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
+	-->	
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
@@ -34,7 +36,7 @@
 
 	<!-- PRODUCT VARIATIONS -->
 
-	<h2>Variaciones</h2>
+	<h2>Contenido</h2>
 
 	<div class="padLeft">
 
@@ -45,7 +47,7 @@
 	
 		<p>
 			<%= 
-				link_to_remote 'Add product variation',
+				link_to_remote 'Adicionar Contenido',
 		    	{
 						:url => { :action => "add_variation_ajax" },
 						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
@@ -76,43 +78,48 @@
 				El producto esta descontinuado 
 			</label>
 			<span class="info">
-				Discontinued products will continue to show on the site until there are no more in stock.
+				Productos descontinuados siguen mostrandose hasta que no exista mas en stock.
 			</span>
 		</p>
 	
 		<p>
-			<%= make_label('Date available') %>
+			<%= make_label('Fecha de disponibilidad') %>
 			<%= date_select 'product', 'date_available'  %>
 		</p>
 
 		<div class="float">
-			<p>
+		<!--<p>
 				<%= make_label('Width') %>
 				<%= text_field 'product', 'size_width', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
+		-->	
+		<!--
 			<p>
 				<%= make_label('Depth') %>
 				<%= text_field 'product', 'size_depth', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
+		-->
 		</div>
 
 		<div class="float">
-			<p>
+		<!--<p>
 				<%= make_label('Height') %>
 				<%= text_field 'product', 'size_height', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-			<p>
+		-->	
+		<!--<p>
 				<%= make_label('Weight') %>
 				<%= text_field 'product', 'weight', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(pounds)</span>
 			</p>
+		-->	
 		</div>
 		<div class="clear">&nbsp;</div>
 	
@@ -120,10 +127,12 @@
 
 	<div class="float">
 		<p>
-			<label for="product_description">Description</label>
+			<label for="product_description">Descripcion</label>
+			<!--
 			<span class="info">
 		    HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
-		  </span>
+		    </span>
+		    -->
 			<br/>
 			<%= text_area 'product', 'description', :rows => 14, :class => 'textArea'  %>
 		</p>

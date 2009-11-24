@@ -4,9 +4,7 @@
 		<%= make_label('Nombre', true) %>
 		<%= text_field_tag('variation[][name]', variation.short_name, :size => 30, :class => 'textInput') %>
 		<br/>
-	<!--
-	    <span class="info">ie: Red XXL</span>
-	-->
+	<!--<span class="info">ie: Red XXL</span>-->
 	</div>
 	<div class="float">
 		<%= make_label('Codigo Producto', true) %>
