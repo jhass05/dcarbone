@@ -11,7 +11,11 @@
 <h1>Categorizar este producto</h1>
 
 <p>
+<<<<<<< HEAD:app/views/admin/products/_crud_right.rhtml
+	<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div>- <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que es una categoria?</a></div>
+=======
 	<a href="/admin/tags/list" class="action">Administrar Categorias</a><div>- <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que es una categoria?</a></div>
+>>>>>>> nilton:app/views/admin/products/_crud_right.rhtml
 </p>
 
 
@@ -46,17 +50,15 @@
 <p class="info">
 	Categorias seras asignadas cuando se guarde este producto.
 </p>
+<!--
 <p class="info">
 	<i>(Button at the bottom of this page)</i>
 </p>
-
+-->
 <!-- 
 	RELATED PRODUCTS ############################################################
 -->
-<<<<<<< HEAD:app/views/admin/products/_crud_right.rhtml~
-=======
  <!--
->>>>>>> nilton:app/views/admin/products/_crud_right.rhtml~
 <h1>Productos Relacionados</h1>
 <%
 	i = 0

@@ -13,11 +13,7 @@
 		</div>
 		<div class="float">
 			<%= make_label('Codigo Producto', true) %>
-<<<<<<< HEAD:app/views/admin/products/_form.rhtml~
-			<%= text_field 'product', 'code', :class => 'textInput', :size => 10 %>
-=======
-			<%= text_field 'product', 'code', :class => 'textInput', :size => 14 %>
->>>>>>> e9bd5a152fa5879c98628ddbb856a0d10d2fcdcb:app/views/admin/products/_form.rhtml~
+			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
 		</div>
 		<div class="float">
 			<%= make_label('Precio') %>
@@ -49,7 +45,7 @@
 	
 		<p>
 			<%= 
-				link_to_remote 'Add product variation',
+				link_to_remote 'Adicionar contenido',
 		    	{
 						:url => { :action => "add_variation_ajax" },
 						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
@@ -80,43 +76,47 @@
 				El producto esta descontinuado 
 			</label>
 			<span class="info">
-				Discontinued products will continue to show on the site until there are no more in stock.
+				El producto esta descontinuado pero se mostrara hasta que exista mas en stock.
 			</span>
 		</p>
 	
 		<p>
-			<%= make_label('Date available') %>
+			<%= make_label('Fecha de disponibilidad') %>
 			<%= date_select 'product', 'date_available'  %>
 		</p>
 
 		<div class="float">
-			<p>
+		<!--<p>
 				<%= make_label('Width') %>
 				<%= text_field 'product', 'size_width', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-			<p>
+		-->	
+		<!--<p>
 				<%= make_label('Depth') %>
 				<%= text_field 'product', 'size_depth', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
+		-->	
 		</div>
 
 		<div class="float">
-			<p>
+		<!--<p>
 				<%= make_label('Height') %>
 				<%= text_field 'product', 'size_height', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-			<p>
+		-->
+		<!--<p>
 				<%= make_label('Weight') %>
 				<%= text_field 'product', 'weight', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(pounds)</span>
 			</p>
+	    -->
 		</div>
 		<div class="clear">&nbsp;</div>
 	
