@@ -59,8 +59,8 @@
 			<div id="navcap_right"></div>
 			<div id="navigation-inner">
 				<ul class="navigation">
-					<li class="<%= @cname == 'main' ? 'active' : '' %>"><a href="/">Inicio</a></li>
-					<li class="<%= (@cname == 'store' && @aname == 'index') ? 'active' : '' %>"><a href="/store">Todos los productos</a></li>
+					<li class="<%= @cname == 'main' ? 'active' : '' %>"><a href="/">Home</a></li>
+					<li class="<%= (@cname == 'store' && @aname == 'index') ? 'active' : '' %>"><a href="/store">All Products</a></li>
 					<% 
 						@main_nav_tags.each_index do |i| 
 							tag = @main_nav_tags[i]
@@ -117,9 +117,9 @@
 
 	<div id="footer">
 		<ul class="navigation">
-			<li><a href="/">Inicio</a></li>
-			<li><a href="/questions/faq">Preguntas</a></li>
-			<li><a href="/questions/ask">Contactos</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/questions/faq">FAQ</a></li>
+			<li><a href="/questions/ask">Contact Us</a></li>
 			<li><a href="/blog">Blog</a></li>
 			<li><a href="/customers/wishlist">Wishlist</a></li>
 			<li><a href="/store/show_cart" class="submodal-600-400">Cart</a></li>

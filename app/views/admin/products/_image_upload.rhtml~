@@ -6,12 +6,12 @@
 <div class="padLeft">
 	<% if @product.images.length > 0 then %>
 		<p>
-			Drag and drop images to set their order on the item page.
+			Arrastra las imagenes para establecer el orden.
 			<br/>
 			<span class="hlt">La primera imagen mostrada sera la por defecto.</span>
 		</p>
 		<p class="info">
-			If you don't see an image it means the path is broken or doesn't exist any longer.
+			Si no ves la imagen significa que la ruta .
 		</p>
 		<div>
 			<ul onselectstart="return false;" class="sortable" id="image_list">

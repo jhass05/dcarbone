@@ -12,7 +12,7 @@
 	<%= javascript_include_tag :defaults, :cache => 'default' %>
   <%= javascript_include_tag 'substruct', 'subModal', :plugin => 'substruct', :cache => 'substruct' %>
 	<%= stylesheet_link_tag 'admin', 'subModal', :plugin => 'substruct', :cache => 'substruct_admin' %>
-	<%= yield :header %>
+	
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 	<div id="navigation">
 		<ul class="navigation">
 			<li class="<%= @cname == 'orders' ? 'active' : '' %>">
-				<a href="/admin/orders">Orders</a>
+				<a href="/admin/orders">Ordenes</a>
 			</li>
 			<li class="<%= @cname == 'products' ? 'active' : '' %>">
 				<%= link_to_section "Productos", :controller=>"/admin/products" rescue nil %>
@@ -70,10 +70,10 @@
 			  <br/>
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>
-			<a href="/">Public site</a> -
+			<a href="/">Sitio Publico</a> -
 			<a href="/admin/preferences/">Preferencias</a> - 
-			<a href="http://code.google.com/p/substruct/wiki/HelpUsage" class="submodal-800-600">Ayuda</a> -
-			<a href="http://dev.subimage.com/projects/substruct/">Acerca el Carbonazo</a>
+			<a href="http://code.google.com/p/substruct/wiki/HelpUsage" class="submodal-800-600">Ayuda en linea</a> -
+			<a href="http://dev.subimage.com/projects/substruct/">Acerca Carbonazo</a>
 		</div>
 	</div>
 

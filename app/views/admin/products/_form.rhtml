@@ -19,12 +19,20 @@
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 	<!--
 	    <div class="float">
 			<%= make_label('Quantity') %>
 			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
 	-->	
+=======
+	<!--<div class="float">
+			<%= make_label('Cantidad') %>
+			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
+		</div>
+	-->
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
@@ -47,7 +55,11 @@
 	
 		<p>
 			<%= 
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 				link_to_remote 'Adicionar Contenido',
+=======
+				link_to_remote 'Adicionar contenido',
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		    	{
 						:url => { :action => "add_variation_ajax" },
 						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
@@ -78,7 +90,11 @@
 				El producto esta descontinuado 
 			</label>
 			<span class="info">
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 				Productos descontinuados siguen mostrandose hasta que no exista mas en stock.
+=======
+				El producto esta descontinuado pero se mostrara hasta que exista mas en stock.
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 			</span>
 		</p>
 	
@@ -95,14 +111,22 @@
 				<span class="info">(inches)</span>
 			</p>
 		-->	
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 		<!--
 			<p>
+=======
+		<!--<p>
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 				<%= make_label('Depth') %>
 				<%= text_field 'product', 'size_depth', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 		-->
+=======
+		-->	
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		</div>
 
 		<div class="float">
@@ -112,14 +136,22 @@
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 		-->	
+=======
+		-->
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		<!--<p>
 				<%= make_label('Weight') %>
 				<%= text_field 'product', 'weight', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(pounds)</span>
 			</p>
+<<<<<<< HEAD:app/views/admin/products/_form.rhtml
 		-->	
+=======
+	    -->
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		</div>
 		<div class="clear">&nbsp;</div>
 	
@@ -130,6 +162,7 @@
 			<label for="product_description">Descripcion</label>
 			<!--
 			<span class="info">
+		    
 		    HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
 		    </span>
 		    -->
@@ -149,5 +182,6 @@
 
 <%= render :partial => 'product_upload' %>
 
+<!--
 <br/>
-<div class="line">&nbsp;</div>
+<div class="line">&nbsp;</div> -->
