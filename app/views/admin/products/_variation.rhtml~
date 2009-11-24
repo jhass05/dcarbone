@@ -8,7 +8,7 @@
 	</div>
 	<div class="float">
 		<%= make_label('Codigo Producto', true) %>
-		<%= text_field_tag('variation[][code]', variation.code, :size => 12, :class => 'textInput') %>
+		<%= text_field_tag('variation[][code]', variation.code, :size => 10, :class => 'textInput') %>
 	</div>
 	<div class="float">
 		<%= make_label('Precio') %>
