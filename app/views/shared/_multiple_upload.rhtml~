@@ -14,7 +14,7 @@
 </p>
 
 <p>
-	<a href="#" class="action" onclick="addEmptyUpload();return false;">Adicionar Imagen</a>
+	<a href="#" class="action" onclick="addEmptyUpload();return false;">Add file to upload</a>
 	<script language="javascript" type="text/javascript">
 		// Adds an empty file upload html element to the form.
 		function addEmptyUpload() {

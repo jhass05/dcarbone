@@ -19,20 +19,12 @@
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
-<<<<<<< HEAD:app/views/admin/products/_form.rhtml
-	<!--
-	    <div class="float">
-			<%= make_label('Quantity') %>
-			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
-		</div>
-	-->	
-=======
+
 	<!--<div class="float">
 			<%= make_label('Cantidad') %>
 			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
 	-->
->>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/products/_form.rhtml
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
@@ -135,12 +127,13 @@
 	<div class="float">
 		<p>
 			<label for="product_description">Descripcion</label>
+			
 			<!--
 			<span class="info">
-		    
 		    HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
 		    </span>
 		    -->
+			
 			<br/>
 			<%= text_area 'product', 'description', :rows => 14, :class => 'textArea'  %>
 		</p>
@@ -150,6 +143,7 @@
 </div>
 
 <%= render :partial => 'image_upload' %>
+
 <!--
 <br/>
 <div class="line">&nbsp;</div>
