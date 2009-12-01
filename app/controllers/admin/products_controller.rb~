@@ -59,13 +59,13 @@ class Admin::ProductsController < Admin::BaseController
   end
 
   def new
-    @title = "New Product"
+    @title = "Nuevo Producto"
 		@image = Image.new
     @product = Product.new
   end
   
   def edit
-    @title = "Editing A Product"
+    @title = "Editar Un Producto"
     @product = Product.find(params[:id])
 		@image = Image.new
   end
@@ -77,11 +77,11 @@ class Admin::ProductsController < Admin::BaseController
     # If we have ID param this isn't a new product
     if params[:id]
       @new_product = false
-      @title = "Editing Product"
+      @title = "Editar Producto"
       @product = Product.find(params[:id])
     else
       @new_product = true
-      @title = "New Product"
+      @title = "Nuevo Producto"
       @product = Product.new()
     end
     @product.attributes = params[:product]
@@ -135,9 +135,9 @@ class Admin::ProductsController < Admin::BaseController
         end
       end
       
-      flash[:notice] = "Product '#{@product.name}' saved."
+      flash[:notice] = "El Producto '#{@product.name}' fue guardado."
       if image_errors.length > 0
-        flash[:notice] += "<b>Warning:</b> Failed to upload image(s) #{image_errors.join(',')}. This may happen if the size is greater than the maximum allowed of #{Image::MAX_SIZE / 1024 / 1024} MB!"
+        flash[:notice] += "<b>Cuidado:</b> fallo la carga de la imagen(s) #{image_errors.join(',')}. Esto pudo suceder a causa de que el tamaño maximo permitido es de #{Image::MAX_SIZE / 1024 / 1024} MB!"
       end
       if download_errors.length > 0
         flash[:notice] += "<b>Warning:</b> Failed to upload file(s) #{download_errors.join(',')}."
@@ -222,7 +222,7 @@ class Admin::ProductsController < Admin::BaseController
 	  # Set random ID so that we can reference things from JS...
 	  @variation.id = Time.now.to_i
 	  render(:update) { |page| page.insert_html :bottom, 'variation_container', :partial => 'variation' }
-  end
+    end
 	
 	# Called for actually removing a variation if found, or just returns
 	# nothing.

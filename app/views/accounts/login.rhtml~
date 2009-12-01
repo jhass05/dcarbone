@@ -1,6 +1,6 @@
 <%= form_tag :action=> "login" %>
 
-<h1>Inciar Sesion</h1>
+<h1>Iniciar Sesion</h1>
 
 
 <% if flash['notice'] %>
@@ -8,11 +8,12 @@
 <% end %>
 
 <div class="padLeft">
+  
   <p class="info">
-    All attempts to access this system are logged.
+    SAll attempts to access this system are logged.
     <br/>Unauthorized access is prohibited and punishable by law.
   </p>
-
+  
 
   <p>
     <label for="user_login">Login:</label>
@@ -23,7 +24,7 @@
   </p>
 
   <p>
-    <input type="submit" name="aceptar" value="Login" class="button eighty" />
+    <input type="submit" name="login" value="Aceptar" class="button eighty" />
   </p>
 
 

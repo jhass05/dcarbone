@@ -132,7 +132,11 @@
 
 	<h2>
 		<% if !@parent_tag %>
+<<<<<<< HEAD:app/views/admin/tags/list.rhtml
 			Lista de categorias
+=======
+			Lista De Categorias
+>>>>>>> 657849c652050a5552c6a45703fdc4ca47f1c89d:app/views/admin/tags/list.rhtml
 		<% else %>
 			<a href="/admin/tags/list">Lista de categorias</a> &gt; 
 			<% if @parent_tag.parent %>
@@ -164,7 +168,7 @@
 		Puedes tener categorias con subcategorias.
 	</span></p>
 	<p>
-		Para adicionar una siTo use a tag as a group click on it's name. You will be taken to another view where you may create and order tags within the group.
+		Para adicionar una subcategoria solo hay que seleccionar la categoria para luego ingresar la subcategoria.
 	</p>
 	<p>
 		Borrar una categoria borrara tambien las subcategorias dentro.

@@ -17,7 +17,7 @@
     
 	</form>
 
-<script language="javasc<div>ript" type="text/javascript">
+<script language="javascript" type="text/javascript">
 	// Called when closing the Tag edit dialog box
 	// Fires off a request for rendering the partial in our list box
 	//

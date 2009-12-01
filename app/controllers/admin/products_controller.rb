@@ -137,10 +137,10 @@ class Admin::ProductsController < Admin::BaseController
       
       flash[:notice] = "El Producto '#{@product.name}' fue guardado."
       if image_errors.length > 0
-        flash[:notice] += "<b>Warning:</b> Failed to upload image(s) #{image_errors.join(',')}. This may happen if the size is greater than the maximum allowed of #{Image::MAX_SIZE / 1024 / 1024} MB!"
+        flash[:notice] += "<b>Cuidado:</b> Fallo la carga de imagen(s) #{image_errors.join(',')}. Esto pudo suceder a causa de que el tamaño maximo permitido es de #{Image::MAX_SIZE / 1024 / 1024} MB!"
       end
       if download_errors.length > 0
-        flash[:notice] += "<b>Warning:</b> Failed to upload file(s) #{download_errors.join(',')}."
+        flash[:notice] += "<b>Cuidado:</b> Fallo la carga de imagen(s) #{download_errors.join(',')}."
       end
       redirect_to :action => 'edit', :id => @product.id
     else
@@ -222,7 +222,7 @@ class Admin::ProductsController < Admin::BaseController
 	  # Set random ID so that we can reference things from JS...
 	  @variation.id = Time.now.to_i
 	  render(:update) { |page| page.insert_html :bottom, 'variation_container', :partial => 'variation' }
-  end
+    end
 	
 	# Called for actually removing a variation if found, or just returns
 	# nothing.

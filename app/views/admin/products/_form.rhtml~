@@ -1,6 +1,5 @@
 <%= error_messages_for 'product' %>
 
-
 <!-- 
 	PRODUCT AND VARIATIONS ######################################################
 -->
@@ -15,11 +14,16 @@
 			<%= make_label('Codigo Producto', true) %>
 			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
 		</div>
+		
+		<% if @product.variations.size > 0 
+		   else
+		%>
 		<div class="float">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
-
+        <% end %>
+        
 	<!--<div class="float">
 			<%= make_label('Cantidad') %>
 			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
@@ -28,7 +32,7 @@
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
-				Cuando uses variaciones el precio y la cantidad<br/>para el "producto" no sera visible en el main site.
+				Cuando llenes contenido, el precio del producto no sera<br/>editable, este se calculara con los precios del contenido.
 			</div>
 		<% end %>
 
@@ -153,4 +157,5 @@
 
 <!--
 <br/>
-<div class="line">&nbsp;</div> -->
+<div class="line">&nbsp;</div> 
+-->
