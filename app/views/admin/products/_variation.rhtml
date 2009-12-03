@@ -16,13 +16,11 @@
 		<%= make_label('Precio') %>
 		<%= text_field_tag('variation[][price]', variation.price, :size => 6, :class => 'textInput numeric') %>
 	</div>
-
-	<!--
-    <div class="float">
+    <div class="floatHidden">
 		<%= make_label('Cantidad') %>
-		<%= text_field_tag('variation[][quantity]', variation.quantity, :size => 6, :class => 'textInput numeric') %>
+		<%= text_field_tag('variation[][quantity]', variation.quantity, :value => '1',:size => 6, :class => 'textInput numeric') %>
 	</div>
-	
+	<!--
 	<div class="float">
 		<%= make_label('Peso') %>
 		<%= text_field_tag('variation[][weight]', variation.weight, :size => 6, :class => 'textInput numeric') %>

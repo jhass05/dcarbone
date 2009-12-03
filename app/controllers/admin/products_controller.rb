@@ -67,6 +67,7 @@ class Admin::ProductsController < Admin::BaseController
   def edit
     @title = "Editar Un Producto"
     @product = Product.find(params[:id])
+    
 		@image = Image.new
   end
 
@@ -131,7 +132,10 @@ class Admin::ProductsController < Admin::BaseController
           variation = @product.variations.find_or_create_by_id(v[:id])
           variation.attributes = v
           variation.save
+          
+          @product.price = variation.price
           @product.variations << variation
+          
         end
       end
       

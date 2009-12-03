@@ -67,6 +67,7 @@ class Admin::ProductsController < Admin::BaseController
   def edit
     @title = "Editar Un Producto"
     @product = Product.find(params[:id])
+    
 		@image = Image.new
   end
 
@@ -131,16 +132,19 @@ class Admin::ProductsController < Admin::BaseController
           variation = @product.variations.find_or_create_by_id(v[:id])
           variation.attributes = v
           variation.save
+          
+          @product.price = variation.price
           @product.variations << variation
+          
         end
       end
       
       flash[:notice] = "El Producto '#{@product.name}' fue guardado."
       if image_errors.length > 0
-        flash[:notice] += "<b>Cuidado:</b> fallo la carga de la imagen(s) #{image_errors.join(',')}. Esto pudo suceder a causa de que el tamaño maximo permitido es de #{Image::MAX_SIZE / 1024 / 1024} MB!"
+        flash[:notice] += "<b>Cuidado:</b> Fallo la carga de imagen(s) #{image_errors.join(',')}. Esto pudo suceder a causa de que el tamaño maximo permitido es de #{Image::MAX_SIZE / 1024 / 1024} MB!"
       end
       if download_errors.length > 0
-        flash[:notice] += "<b>Warning:</b> Failed to upload file(s) #{download_errors.join(',')}."
+        flash[:notice] += "<b>Cuidado:</b> Fallo la carga de imagen(s) #{download_errors.join(',')}."
       end
       redirect_to :action => 'edit', :id => @product.id
     else

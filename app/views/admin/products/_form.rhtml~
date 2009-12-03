@@ -15,20 +15,17 @@
 			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
 		</div>
 		
-		<% if @product.variations.size > 0 
-		   else
-		%>
+
 		<div class="float">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
-        <% end %>
         
-	<!--<div class="float">
+	<div class="floatHidden">
 			<%= make_label('Cantidad') %>
-			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
+			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '10'; %>
 		</div>
-	-->
+	
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
