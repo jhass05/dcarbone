@@ -1,6 +1,5 @@
 <%= error_messages_for 'product' %>
 
-
 <!-- 
 	PRODUCT AND VARIATIONS ######################################################
 -->
@@ -15,10 +14,13 @@
 			<%= make_label('Codigo Producto', true) %>
 			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
 		</div>
+		
+
 		<div class="float">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
+        
 	<!--<div class="float">
 			<%= make_label('Cantidad') %>
 			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
@@ -27,7 +29,7 @@
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
-				Cuando uses variaciones el precio y la cantidad<br/>para el "producto" no sera visible en el main site.
+				Cuando llenes contenido, el precio del producto no sera<br/>editable, este se calculara con los precios del contenido.
 			</div>
 		<% end %>
 
@@ -46,7 +48,8 @@
 	
 		<p>
 			<%= 
-				link_to_remote 'Adicionar contenido',
+
+				link_to_remote 'Adicionar Contenido',
 		    	{
 						:url => { :action => "add_variation_ajax" },
 						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
@@ -86,39 +89,38 @@
 			<%= date_select 'product', 'date_available'  %>
 		</p>
 
+        <!--
 		<div class="float">
-		<!--<p>
+		    <p>
 				<%= make_label('Width') %>
 				<%= text_field 'product', 'size_width', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-		-->	
-		<!--<p>
+			
+		    <p>
 				<%= make_label('Depth') %>
 				<%= text_field 'product', 'size_depth', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-		-->	
 		</div>
 
 		<div class="float">
-		<!--<p>
+		    <p>
 				<%= make_label('Height') %>
 				<%= text_field 'product', 'size_height', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(inches)</span>
 			</p>
-		-->
-		<!--<p>
+            <p>
 				<%= make_label('Weight') %>
 				<%= text_field 'product', 'weight', :size => '10', :class => 'textInput'  %>
 				<br/>
 				<span class="info">(pounds)</span>
 			</p>
-	    -->
 		</div>
+		-->
 		<div class="clear">&nbsp;</div>
 	
 	</div>
@@ -126,10 +128,13 @@
 	<div class="float">
 		<p>
 			<label for="product_description">Descripcion</label>
+			
+			<!--
 			<span class="info">
-		    
 		    HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
-		  </span>
+		    </span>
+		    -->
+			
 			<br/>
 			<%= text_area 'product', 'description', :rows => 14, :class => 'textArea'  %>
 		</p>
@@ -140,11 +145,14 @@
 
 <%= render :partial => 'image_upload' %>
 
+<!--
 <br/>
 <div class="line">&nbsp;</div>
+-->
 
 <%= render :partial => 'product_upload' %>
 
 <!--
 <br/>
-<div class="line">&nbsp;</div> -->
+<div class="line">&nbsp;</div> 
+-->

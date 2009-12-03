@@ -4,7 +4,7 @@
 		<%= link_to_unless_current('General', :controller => 'preferences', :action => 'index')%>
 	</li>
 	<li>
-		<%= link_to_unless_current('Tasa de envio', :controller => 'preferences', :action => 'shipping') %>
+		<%= link_to_unless_current('Shipping Rates', :controller => 'preferences', :action => 'shipping') %>
 	</li>
 	<li>
 		<%= link_to_unless_current('Roles De Usuario', :controller => 'roles', :action => 'index')%>

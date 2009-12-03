@@ -4,6 +4,7 @@
 	<%= link_to 'Crear Nuevo Producto', {:action => 'new'}, :class => 'button hundredfifty' %>
 	<div class="clear">&nbsp;</div>
 
+
     <!--
 	<h1>Buscar Productos</h1>
 	<%= form_tag :controller => 'products', :action => 'search' %>
@@ -16,7 +17,7 @@
     
 	</form>
 
-<script language="javasc<div>ript" type="text/javascript">
+<script language="javascript" type="text/javascript">
 	// Called when closing the Tag edit dialog box
 	// Fires off a request for rendering the partial in our list box
 	//
@@ -27,7 +28,7 @@
 	}
 </script>
 
-  <h1 style="margin-top:20px;">Tagging</h1>
+  <h1 style="margin-top:20px;">Categorias</h1>
 	<p>
 
 		<a href="/admin/tags/list" class="action">Administrar Categorias</a> <div> - <a href="http://dev.subimage.com/projects/substruct/wiki/HelpTagging" class="submodal-600-400 info">Que son las categorias?</a></div>
