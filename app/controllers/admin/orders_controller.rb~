@@ -34,7 +34,7 @@ class Admin::OrdersController < Admin::BaseController
       @viewing_by = @list_options[0]
     end
 
-    @title = "Reportes"
+    @title = "Order List"
 
     conditions = nil
 

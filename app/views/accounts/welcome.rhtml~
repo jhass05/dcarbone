@@ -1,12 +1,12 @@
 
 <div class="memo">
-    <h3>Welcome</h3>
+    <h3>Bienvenido</h3>
 
-    <p>You are now logged into the system...</p>
+    <p>Usted se ha ingresado dentro del sistema...</p>
     <p>
-    <a href="/admin/">Go to the admin control panel</a>
+    <a href="/admin/">Ir al panel de administracion</a>
     </p>
       
-    <%= link_to "&#171; logout", :action=>"logout"%>  
+    <%= link_to "&#171; Cerrar Sesion", :action=>"logout"%>  
       
 </div>

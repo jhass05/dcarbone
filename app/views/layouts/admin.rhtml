@@ -40,7 +40,7 @@
 	<div id="navigation">
 		<ul class="navigation">
 			<li class="<%= @cname == 'orders' ? 'active' : '' %>">
-				<a href="/admin/orders">Ordenes</a>
+				<a href="/admin/orders">Reportes</a>
 			</li>
 			<li class="<%= @cname == 'products' ? 'active' : '' %>">
 				<%= link_to_section "Productos", :controller=>"/admin/products" rescue nil %>
@@ -48,15 +48,19 @@
 			<li class="<%= @cname == 'promotions' ? 'active' : '' %>">
 				<%= link_to_section "Promociones", :controller=>"/admin/promotions" rescue nil %>
 			</li>
+			<!--
 			<li class="<%= @cname == 'questions' ? 'active' : '' %>">
 				<%= link_to_section "Preguntas", :controller=>"/admin/questions" rescue nil %>
 			</li>
+			-->
 			<li class="<%= @cname == 'content_nodes' ? 'active' : '' %>">
 				<%= link_to_section "Contenido", :controller=>"/admin/content_nodes" rescue nil %>
 			</li>
+			<!--
 			<li class="<%= @cname == 'files' ? 'active' : '' %>">
 				<%= link_to_section "Archivos", :controller=>"/admin/files" rescue nil %>
 			</li>
+			-->
 		  <li class="<%= @cname == 'users' ? 'active' : '' %>">
 				<%= link_to_section "Usuarios &amp; Clientes", :controller=>"/admin/users" rescue nil %>
 			</li>
@@ -66,14 +70,14 @@
 	<div id="header">
 		<div id="global_nav"> 
 			<div style="margin-bottom:10px;">
-			  <span style="text-transform:capitalize;"><%= current_user_notice rescue nil %></span>
+			  <span style="text-transform:capitalize;"><a href="/accounts/logout">Salir</a> </span>
 			  <br/>
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>
-			<a href="/">Sitio Publico</a> -
-			<a href="/admin/preferences/">Preferencias</a> - 
-			<a href="http://code.google.com/p/substruct/wiki/HelpUsage" class="submodal-800-600">Ayuda en linea</a> -
-			<a href="http://dev.subimage.com/projects/substruct/">Acerca Carbonazo</a>
+			<a href="/">Sitio Ventas</a> -
+		<!--<a href="/admin/preferences/">Preferencias</a>  -->
+			<a href="http://www.wibo.com.bo/clientes/dcarbone" class="submodal-800-600">Ayuda en linea</a> -
+	   <!--	<a href="http://dev.subimage.com/projects/substruct/">Acerca Carbonazo</a> -->
 		</div>
 	</div>
 

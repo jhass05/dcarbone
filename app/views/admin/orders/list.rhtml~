@@ -1,7 +1,7 @@
 <div id="left">
 	<h1><%=h @title %></h1>
 
-<!--  <%= generate_navigation(@list_options, @viewing_by, 'list') %> -->
+  <%= generate_navigation(@list_options, @viewing_by, 'list') %>
 
 	<% if @search_title %>
 		<h2><%=h @search_title %></h2>

@@ -1,6 +1,6 @@
 <h1>Session Cerrada</h1>
 
-<p>Usted salio del sistema administrador "D' Carbone"</p>
+<p>Cerraste session el sistema administrador "D' Carbone"</p>
 
 <ul>
   <li><%= link_to "Volver a ingresar", :action=>"login"%></li>
