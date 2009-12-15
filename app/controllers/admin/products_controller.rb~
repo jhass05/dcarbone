@@ -86,7 +86,7 @@ class Admin::ProductsController < Admin::BaseController
       @product = Product.new()
     end
     @product.attributes = params[:product]
-       @product.price=7
+    @product.price=7
        
 		if @product.save
 			
@@ -106,9 +106,9 @@ class Admin::ProductsController < Admin::BaseController
               @product.images << new_image
             else
               image_errors.push(new_image.filename)
-            end
-          end
-        end
+            end #fin if
+          end#fin if 
+        end# 
       end
   
       # Build downloads from form

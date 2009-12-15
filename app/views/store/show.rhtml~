@@ -70,7 +70,7 @@
 		%>
 		<% if @variations.size > 0 %>
 			<!-- product variations -->
-			<h2>Options</h2>
+			<h2>Opciones</h2>
 			<div>
 				<table>
 				<% @variations.each_index do |i| %>
@@ -93,7 +93,7 @@
 		<% end %>
 		
 		<br/>
-		<h3>How many do you want?</h3>
+		<h3>Cuantos quieres?</h3>
 		<table style="width:100%;text-align:center;">
 			<tr>
 				<td style="width:40%;text-align:right;padding-right:5px;">
