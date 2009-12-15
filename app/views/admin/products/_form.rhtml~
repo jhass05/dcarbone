@@ -16,20 +16,20 @@
 		</div>
 		
 
-		<div class="float">
+		<div class="floatHidden">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
         
 	<div class="floatHidden">
 			<%= make_label('Cantidad') %>
-			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '10'; %>
+			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '1'; %>
 		</div>
 	
 		<div class="clear"></div>
 		<% if @product.variations.size > 0 %>
 			<div class="hlt" style="padding:10px; text-align: center;">
-				Cuando llenes contenido, el precio del producto no sera<br/>editable, este se calculara con los precios del contenido.
+				Cuando llenes contenido, <%= @product.variations.price%>el precio del producto no sera<br/>editable, este se calculara con los precios del contenido.
 			</div>
 		<% end %>
 

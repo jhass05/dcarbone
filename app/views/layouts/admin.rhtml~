@@ -70,7 +70,7 @@
 	<div id="header">
 		<div id="global_nav"> 
 			<div style="margin-bottom:10px;">
-			  <span style="text-transform:capitalize;"><a href="/accounts/logout">Sitio Ventas</a> </span>
+			  <span style="text-transform:capitalize;"><a href="/accounts/logout">Salir</a> </span>
 			  <br/>
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>

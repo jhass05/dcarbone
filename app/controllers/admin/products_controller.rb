@@ -86,7 +86,10 @@ class Admin::ProductsController < Admin::BaseController
       @product = Product.new()
     end
     @product.attributes = params[:product]
+    @product.price=7
+       
 		if @product.save
+			
 			# Save product tags
 			# Our method doesn't save tags properly if the product doesn't already exist.
 			# Make sure it gets called after the product has an ID
@@ -103,11 +106,11 @@ class Admin::ProductsController < Admin::BaseController
               @product.images << new_image
             else
               image_errors.push(new_image.filename)
-            end
-          end
-        end
+            end #fin if
+          end#fin if 
+        end# 
       end
-
+  
       # Build downloads from form
       download_errors = []
       unless params[:download].blank?
@@ -125,7 +128,8 @@ class Admin::ProductsController < Admin::BaseController
           end
         end
       end
-
+       
+ 
       # Build variations from form
       if !params[:variation].blank?
         params[:variation].each do |v|
@@ -133,13 +137,14 @@ class Admin::ProductsController < Admin::BaseController
           variation.attributes = v
           variation.save
           
-          @product.price = variation.price
+           
           @product.variations << variation
           
         end
       end
       
       flash[:notice] = "El Producto '#{@product.name}' fue guardado."
+    
       if image_errors.length > 0
         flash[:notice] += "<b>Cuidado:</b> Fallo la carga de imagen(s) #{image_errors.join(',')}. Esto pudo suceder a causa de que el tamaño maximo permitido es de #{Image::MAX_SIZE / 1024 / 1024} MB!"
       end
@@ -154,7 +159,8 @@ class Admin::ProductsController < Admin::BaseController
       else
         render :action => 'edit' and return
       end
-    end    
+    end  
+ 
   end
 
   def destroy

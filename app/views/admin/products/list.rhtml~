@@ -16,9 +16,9 @@
       <col />
       <col style="width:150px;" />
       <col style="width:110px;" />
-      <col style="width:60px;" />
+    <!--  <col style="width:60px;" />
 			<col style="width:60px;" />
-  
+  -->
     </colgroup>
     <tr>
       <th>Nombre</th>
@@ -35,7 +35,7 @@
       <td><%= product.code %></td>
       <td class="numeric"><%= sub_number_to_currency(product.price) %></td>
   <!--    <td class="numeric"><%= product.quantity %></td>   -->
-	<!--		<td style="text-align:center">
+  <!--  		<td style="text-align:center">
 				<%=
 					image_tag(
 						product.is_published? ? 'icons/png-24/16-square-green.png' : 'icons/png-24/16-square-red.png',
