@@ -16,14 +16,14 @@
 		</div>
 		
 
-		<div class="floatHidden">
+		<div class="float">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
         
 	<div class="floatHidden">
 			<%= make_label('Cantidad') %>
-			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '1'; %>
+			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '2'; %>
 		</div>
 	
 		<div class="clear"></div>
