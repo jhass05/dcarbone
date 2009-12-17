@@ -46,21 +46,6 @@
 		
 		</div>
 	
-		<p>
-			<%= 
-
-				link_to_remote 'Adicionar Contenido',
-		    	{
-						:url => { :action => "add_variation_ajax" },
-						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
-		    		:complete => "$('add_variation_link').show(); $('add_variation_indicator').hide();",
-					},
-					:class => 'action',
-					:id => 'add_variation_link'
-			%>
-			<%= image_tag("/indicator.gif", :plugin => 'substruct', :style => 'display:none;', :id => "add_variation_indicator") %>
-		</p>
-		<br/>
 	</div>
 
 </div>
@@ -73,7 +58,8 @@
 
 <div class="padLeft">
 	<div class="float" style="width:230px;">
-	
+       
+        <!--
 		<p>
 			<label>
 				<%= check_box('product', 'is_discontinued', :class => 'inline') %> 
@@ -89,7 +75,7 @@
 			<%= date_select 'product', 'date_available'  %>
 		</p>
 
-        <!--
+        
 		<div class="float">
 		    <p>
 				<%= make_label('Width') %>
