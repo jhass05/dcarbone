@@ -36,7 +36,7 @@ class StoreController < ApplicationController
 
   # Our simple store index
   def index
-    @title = "Store"
+    @title = "store"
 		@tags = Tag.find_alpha
 		@tag_names = nil
 		@viewing_tags = nil

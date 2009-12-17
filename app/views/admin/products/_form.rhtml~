@@ -16,7 +16,7 @@
 		</div>
 		
 
-		<div class="floatHidden">
+		<div class="float">
 			<%= make_label('Precio') %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
@@ -37,13 +37,13 @@
 
 	<!-- PRODUCT VARIATIONS -->
 
-	<h2>Contenido</h2>
+<!--<h2>Contenido</h2>-->
 
 	<div class="padLeft">
 
 		<div id="variation_container">
-			<!-- filled with variations -->
-			<%= render :partial => 'variation', :collection => @product.variations %>
+		
+		
 		</div>
 	
 		<p>

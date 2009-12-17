@@ -503,7 +503,7 @@ div.float, div.floatHalf {
 div.floatHidden, div.floatHalf {
 	float:left;
 	margin-right:10px;
-	hidden: none;
+	display: none;
 }
 
 div.floatHalf {

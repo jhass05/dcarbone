@@ -119,8 +119,8 @@ class Product < Item
 	       i = i + 1
 	    end
 	    return price 
-	    #low_price = variations[0].price
-	    #high_price = variations[variations.size-1].price
+	#low_price = variations[0].price
+	#high_price = variations[variations.size-1].price
     #if low_price == high_price
     #  return low_price
     #else

@@ -37,30 +37,15 @@
 
 	<!-- PRODUCT VARIATIONS -->
 
-	<h2>Contenido</h2>
+<!--<h2>Contenido</h2>-->
 
 	<div class="padLeft">
 
 		<div id="variation_container">
-			<!-- filled with variations -->
-			<%= render :partial => 'variation', :collection => @product.variations %>
+		
+		
 		</div>
 	
-		<p>
-			<%= 
-
-				link_to_remote 'Adicionar Contenido',
-		    	{
-						:url => { :action => "add_variation_ajax" },
-						:loading => "$('add_variation_link').hide(); $('add_variation_indicator').show();",
-		    		:complete => "$('add_variation_link').show(); $('add_variation_indicator').hide();",
-					},
-					:class => 'action',
-					:id => 'add_variation_link'
-			%>
-			<%= image_tag("/indicator.gif", :plugin => 'substruct', :style => 'display:none;', :id => "add_variation_indicator") %>
-		</p>
-		<br/>
 	</div>
 
 </div>

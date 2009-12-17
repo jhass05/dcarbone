@@ -19,7 +19,7 @@
 				end
 			%>
 		</h1>
-	<% end %> 
+	<% end %>
 	
 	<%= will_paginate @products %>
 
