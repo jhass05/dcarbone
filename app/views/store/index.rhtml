@@ -38,19 +38,71 @@
 	<!-- takes up space so we can see the bottom content on this page -->
 	<div id="bottomSpacer">&nbsp;</div>
 </div>
-<!--Fin Left-->
+<!-- Fin Left -->
 
 <!-- Inicio Right -->
-<div id="right">s
-	
-	
-	
-	
-	
-	
-	
-	
-	
+<div id="right">
+<h3>Pedido</h3>	
+
+      <table>
+		<tr>
+			<td style="vertical-align:middle;">
+			</td>
+			<td style="padding-left:4px;">
+				<label class="inline">
+			        <span class="money">* POLLO DORADO</span>
+				</label>
+			</td>
+            <td style="vertical-align:middle;">
+			</td>
+			<td> 
+			    <label class="inline">
+					<span class="money">50</span>
+				</label>
+			</td>
+			</tr>
+			<tr>
+				<td style="vertical-align:middle;">
+				</td>
+					<td style="padding-left:4px;">
+						<label class="inline">
+			    			<span class="money">* HAMBURGUESA DE POLLO</span>
+						</label>
+					</td>
+                    <td style="vertical-align:middle;">
+					</td>
+					<td> 
+					    <label class="inline">
+							<span class="money">60</span>
+						</label>
+					</td>
+			</tr>		
+	   </table>
+
+<div class="price">12</div>	
+	<%= form_tag :action => 'login' %>
+		<div class="form_block">
+			
+			<p>
+				<%= make_label('Nombre', true) %>
+				<input type="text" class="textInput" name="nombre" id="nit"/>
+			</p>
+			
+			<p>
+				<%= make_label('Nit', true) %>
+				<input type="text" class="textInput" name="nit" id ="nit"/>
+			</p>
+					
+	        <p>
+	            <%= submit_tag "Terminar", :class => 'button twohundred' %>
+	            <div class="clear">&nbsp;</div>
+	        </p>
+		
+		</div>
+	</form>
+   
+    <div class="line">&nbsp;</div>
+    		
 </div>
 <!--Fin Rigth-->
 

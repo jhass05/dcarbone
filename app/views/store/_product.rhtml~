@@ -22,8 +22,7 @@
     <div class="product_title">
       <%= link_to(product.name, :controller=>'store', :action=>'show', :id => product.code) %>
     </div>
-      <span class="money"><%= 15 %></span>
-
+      <span class="money"><%= sub_number_to_currency(product.display_price) %></span>
   </div>
   <div class="product_bottom"></div>
 </div>
