@@ -138,6 +138,11 @@ class StoreController < ApplicationController
     )
   end
   
+
+
+  
+  
+  
   # Shows shopping cart in pop-up window.
   #
   def show_cart

@@ -36,7 +36,7 @@ class StoreController < ApplicationController
 
   # Our simple store index
   def index
-    @title = "Store"
+    @title = "store"
 		@tags = Tag.find_alpha
 		@tag_names = nil
 		@viewing_tags = nil
@@ -137,6 +137,13 @@ class StoreController < ApplicationController
       :conditions => 'quantity > 0'
     )
   end
+  
+  def replacer
+     redirect_to :action => 'index'
+  end
+
+  
+  
   
   # Shows shopping cart in pop-up window.
   #

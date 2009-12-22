@@ -44,25 +44,11 @@
 <div id="right">
 <h3>Pedido</h3>	
 
-      <table>
-		<tr>
-			<td style="vertical-align:middle;">
-			</td>
-			<td style="padding-left:4px;">
-				<label class="inline">
-			        <span class="money">* POLLO DORADO</span>
-				</label>
-			</td>
-            <td style="vertical-align:middle;">
-			</td>
-			<td> 
-			    <label class="inline">
-					<span class="money">50</span>
-				</label>
-			</td>
-			</tr>		
-	   </table>
 
+<%= render(:partial => "pedido") %>
+
+
+      
 <div class="price">12</div>	
 	<%= form_tag :action => 'login' %>
 		<div class="form_block">
