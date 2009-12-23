@@ -45,10 +45,9 @@
 <h3>Pedido</h3>	
 
 
-<%= render(:partial => "pedido") %>
+<div id="DisplayDiv"></div></br>
 
 
-      
 <div class="price">12</div>	
 	<%= form_tag :action => 'login' %>
 		<div class="form_block">

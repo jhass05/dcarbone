@@ -1,5 +1,5 @@
 class StoreController < ApplicationController
-  layout 'main'
+  
   include OrderHelper
   include Pagination
   include ActiveMerchant::Billing::Integrations
@@ -47,6 +47,27 @@ class StoreController < ApplicationController
       :page => params[:page],
       :per_page => 10
     )
+    
+  end
+  
+  def pedido
+     
+    @product = Product.find_by_code(params[:id])
+    if !@product
+      flash[:notice] = "Sorry, we couldn't find the product you were looking for"
+      redirect_to :action => 'index' and return false
+    end
+    @title = @product.name
+    @price = @product.price
+    @images = @product.images.find(:all)
+    @default_image = @images[0]
+    @variations = @product.variations.find(
+      :all, 
+      :order => 'name ASC',
+      :conditions => 'quantity > 0'
+    )
+    render (:layout => false)
+   
   end
   
   def search
@@ -122,6 +143,8 @@ class StoreController < ApplicationController
     render :layout => false
   end
   
+  
+  #desechar
   def show
     @product = Product.find_by_code(params[:id])
     if !@product

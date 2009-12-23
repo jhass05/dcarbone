@@ -18,11 +18,14 @@
         end
       %>
      
-      <%= link_to(image, :controller=>'store', :action=>'show', :id => product.code) %>
+      <%= link_to_remote(image, :controller=>'store', 
+                                :url => {:action => :pedido, :id => product.code }, 
+                                :update => 'DisplayDiv', 
+                                :position => :before) %>
       
     </div>
     <div class="product_title">
-      <%= link_to(product.name, :controller=>'store', :action=>'show', :id => product.code) %>
+      <%= product.name %>
     </div>
       <span class="money"><%= sub_number_to_currency(product.display_price) %></span>
   </div>
