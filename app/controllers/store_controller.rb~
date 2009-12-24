@@ -51,9 +51,7 @@ class StoreController < ApplicationController
   end
   
   def pedido
-    
-    
-    
+     
     @product = Product.find_by_code(params[:id])
     if !@product
       flash[:notice] = "Sorry, we couldn't find the product you were looking for"
