@@ -21,8 +21,12 @@
       <%= link_to_remote(image, :controller=>'store', 
                                 :url => {:action => :pedido, :id => product.code }, 
                                 :update => 'DisplayDiv', 
-                                :position => :before) %>
-      
+                                :position => :after) %>
+                                
+      <%= link_to_remote(image, :controller=>'store', 
+                                :url => {:action => :precio, :id => product.code }, 
+                                :update => 'Price'
+                                ) %>
     </div>
     <div class="product_title">
       <%= product.name %>

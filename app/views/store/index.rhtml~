@@ -44,11 +44,16 @@
 <div id="right">
 <h3>Pedido</h3>	
 
+   <table>
+   <tr>
+   <div id="DisplayDiv"></div>
+   </tr>
+   </table>
 
-<div id="DisplayDiv"></div>
+   <div id="Price" class="price">12</div>
 
 
-<div class="price">12</div>	
+
 	<%= form_tag :action => 'login' %>
 		<div class="form_block">
 			

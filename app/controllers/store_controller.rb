@@ -66,9 +66,22 @@ class StoreController < ApplicationController
       :order => 'name ASC',
       :conditions => 'quantity > 0'
     )
-    render (:layout => false)
+    render :partial => 'pedido'
+	
+	
    
   end
+  
+  def precio
+    render (:layout => false)      
+  end
+ 
+  def replacer
+     
+     render (:layout => false)
+  
+  end
+  
   
   def search
     @search_term = params[:search_term]

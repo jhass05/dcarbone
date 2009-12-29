@@ -1,20 +1,19 @@
-     
-	
-		<td style="vertical-align:middle;">
-		</td>
-		<td style="padding-left:4px;">
-			<label class="inline">
-		        <span class="money">* <%= @title %></span>
+<table>
+	<tr>
+		<td style= padding-left:4px;>
+			<label class= inline >
+		        <span class= money >* #{ @title }</span>
 			</label>
 		</td>
-        <td style="vertical-align:middle;">
-		</td>
-		<td> 
-		    <label class="inline">
-				<span class="money"><%= @price%></span>
+		<td style= padding-left:4px> 
+		    <label class= inline >
+				<span class= money >#{ @price }</span>
 			</label>
 		</td>
-		
-	
-
-
+		<td style= padding-left:4px> 
+		    <label class= inline >
+				<span class= money>Borrar</span>
+			</label>
+		</td>
+	</tr>
+</table>

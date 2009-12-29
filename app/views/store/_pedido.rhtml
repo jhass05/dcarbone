@@ -1,19 +1,27 @@
-<table>     
+<!--INICIO PEDIDO X-->
+<div id="<%= @title%>">
+<table>
 	<tr>
-		<td style="vertical-align:middle;">
-		</td>
-		<td style="padding-left:4px;">
-			<label class="inline">
-		        <span class="money">* POLLO DORADO</span>
+		<td style= padding-left:4px;>
+			<label class= inline >
+		        <span class= money >* <%= @title%> </span>
 			</label>
 		</td>
-        <td style="vertical-align:middle;">
+		<td style= padding-left:4px> 
+		    <label class= inline >
+				<span class= money ><%= @price%> </span>
+			</label>
 		</td>
-		<td> 
-		    <label class="inline">
-				<span class="money">50</span>
+		<td style= padding-left:4px> 
+		    <label class= inline >
+				<span class= money><%= link_to_remote image_tag('delete.png'),:update => @title,
+				                                                              :url => {:action => :replacer}
+	                                   
+				 %>
+				</span>
 			</label>
 		</td>
 	</tr>
 </table>
+</div><!-- FIN PEDIDO X-->
 
