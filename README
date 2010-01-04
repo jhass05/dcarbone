@@ -1,7 +1,7 @@
 == Welcome Carbonazo chicken sales
 
 the database in called carbonazo_development
-after it, typed: substruct:bd:bootstrap
+after it, typed: rake substruct:db:bootstrap
 
 
 

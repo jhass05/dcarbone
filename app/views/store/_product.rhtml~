@@ -13,20 +13,24 @@
       <%
         if product.images.empty? 
           image = image_tag('public-ui/no-product-image.gif', :alt=>product.name )
+          
         else
           image = image_tag(product.images[0].public_filename(:small), :alt => product.name) 
+          
         end
       %>
      
-      <%= link_to_remote(image, :controller=>'store', 
+      <%= link_to_remote(image, :controller => 'store', 
                                 :url => {:action => :pedido, :id => product.code }, 
-                                :update => 'DisplayDiv', 
-                                :position => :after) %>
-                                
-      <%= link_to_remote(image, :controller=>'store', 
-                                :url => {:action => :precio, :id => product.code }, 
-                                :update => 'Price'
-                                ) %>
+                                :update => 'DisplayDiv',  
+                                :position => :after,
+                                :complete => "$('indicator').show( )") %>
+      <%= link_to_remote("imagen", :controller => 'store',
+                                 :url => {:action => :precio, :id => product.code},
+                                 :update=> 'DisplayPrice')%>
+
+                               
+    
     </div>
     <div class="product_title">
       <%= product.name %>

@@ -33,7 +33,11 @@ class StoreController < ApplicationController
   # You could set this to be:
   #   @@action_after_checkout = 'finish_order'
   @@action_after_checkout = 'select_shipping_method'
-
+ 
+  def initialize
+      @price = 0
+  end
+   
   # Our simple store index
   def index
     @title = "store"
@@ -47,7 +51,7 @@ class StoreController < ApplicationController
       :page => params[:page],
       :per_page => 12
     )
-    
+  
   end
   
   def pedido
@@ -67,21 +71,22 @@ class StoreController < ApplicationController
       :conditions => 'quantity > 0'
     )
     render :partial => 'pedido'
-	
-	
-   
+    
+  end
+
+  def replacer_pedido
+     render(:layout => false)
   end
   
   def precio
-    render (:layout => false)      
-  end
- 
-  def replacer
-     
      render (:layout => false)
-  
   end
   
+  def calcular_total_pedido
+      
+      
+      
+  end
   
   def search
     @search_term = params[:search_term]
