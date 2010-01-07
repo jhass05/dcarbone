@@ -85,9 +85,7 @@ class Admin::ProductsController < Admin::BaseController
       @title = "Nuevo Producto"
       @product = Product.new()
     end
-    @product.attributes = params[:product]
-    @product.price=7
-       
+    @product.attributes = params[:product]      
 		if @product.save
 			
 			# Save product tags

@@ -66,6 +66,7 @@ class StoreController < ApplicationController
     
     @title = @product.name
     @price = @product.price
+    @@price = @price
     @@total = @@total + @price
     @images = @product.images.find(:all)
     @default_image = @images[0]
@@ -80,6 +81,8 @@ class StoreController < ApplicationController
   end
   
   def replacer_pedido
+     @@total = @@total - @@price 
+     @total_price = @@total
      render :partial => 'replacer_pedido'  
   end  
 
@@ -89,6 +92,17 @@ class StoreController < ApplicationController
      render :partial => 'price'
     
   end
+  
+  def close_sale
+     
+     @buyer = Buyer.new 
+     @buyer.attributes = params[:buyer]       
+     @buyer.save
+     @@total = 0
+     redirect_to "/store"	
+  end
+
+  
       
   def search
     @search_term = params[:search_term]

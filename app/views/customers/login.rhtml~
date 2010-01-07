@@ -1,4 +1,6 @@
+
 <!-- INICIO -->
+
 <div id="left">
 	
 	<h1><%= @title %></h1>

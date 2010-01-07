@@ -56,24 +56,21 @@
    
    
    
-	<%= form_tag :action => 'login' %>
+	<%= form_tag :action => 'close_sale' %>
 		<div class="form_block">
-			
-			<p>
-				<%= make_label('Nombre', true) %>
-				<input type="text" class="textInput" name="nombre" id="nit"/>
-			</p>
-			
-			<p>
-				<%= make_label('Nit', true) %>
-				<input type="text" class="textInput" name="nit" id ="nit"/>
-			</p>
+		    <p>
+		        <%= make_label('Nombre', true) %>
+		        <%= text_field 'buyer', 'name', :class => 'textInput', :size => 25  %> 
+	            </p>
+		    <p>
+			<%= make_label('Nit', true) %>
+                        <%= text_field 'buyer', 'nit', :class => 'textInput', :size => 25  %>
+		    </p>
 					
-	        <p>
-	            <%= submit_tag "Terminar", :class => 'button twohundred' %>
-	            <div class="clear">&nbsp;</div>
-	        </p>
-		
+	            <p>
+	                <%= submit_tag "Terminar", :class => 'button twohundred' %>
+	                <div class="clear">&nbsp;</div>
+	             </p>
 		</div>
 	</form>
    

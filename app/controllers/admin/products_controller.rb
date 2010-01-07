@@ -60,7 +60,7 @@ class Admin::ProductsController < Admin::BaseController
 
   def new
     @title = "Nuevo Producto"
-		@image = Image.new
+    @image = Image.new
     @product = Product.new
   end
   

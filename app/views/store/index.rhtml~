@@ -47,7 +47,7 @@
    <span id="DisplayDiv"></span>
   
   <div class="price"> <%= link_to_remote("Total", :controller => 'store',
-                                 :url => {:action => :precio},
+                                 :url => {:action => :price},
                                  :update=> 'Price')%>
   </div>
   <br>            
@@ -56,24 +56,27 @@
    
    
    
-	<%= form_tag :action => 'login' %>
+	<%= form_tag :action => 'close_sale' %>
 		<div class="form_block">
-			
-			<p>
-				<%= make_label('Nombre', true) %>
-				<input type="text" class="textInput" name="nombre" id="nit"/>
-			</p>
-			
-			<p>
-				<%= make_label('Nit', true) %>
-				<input type="text" class="textInput" name="nit" id ="nit"/>
-			</p>
+		    <p>
+		    <%= make_label('Nombre', true) %>
+		    <%= text_field 'buyer', 'name', :class => 'textInput', :size => 20  %> 
+	            </p>
+
+
+                    
+		    
+
+
+		    <p>
+			<%= make_label('Nit', true) %>
+			<input type="text" class="textInput" name="nit" id ="nit"/>
+		    </p>
 					
-	        <p>
-	            <%= submit_tag "Terminar", :class => 'button twohundred' %>
-	            <div class="clear">&nbsp;</div>
-	        </p>
-		
+	            <p>
+	                <%= submit_tag "Terminar", :class => 'button twohundred' %>
+	                <div class="clear">&nbsp;</div>
+	             </p>
 		</div>
 	</form>
    
