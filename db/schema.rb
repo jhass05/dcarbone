@@ -9,12 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD:db/schema.rb
 ActiveRecord::Schema.define(:version => 20100107151221) do
 
   create_table "buyers", :force => true do |t|
     t.string  "name"
     t.integer "nit",  :limit => 11
   end
+=======
+ActiveRecord::Schema.define(:version => 20100107151142) do
+>>>>>>> cd187d6f489ba553b6aa345039a1385917003948:db/schema.rb
 
   create_table "content_node_types", :force => true do |t|
     t.string "name", :limit => 50, :default => "", :null => false
@@ -288,8 +292,11 @@ ActiveRecord::Schema.define(:version => 20100107151221) do
   add_index "user_uploads", ["created_on", "type"], :name => "creation"
 
   create_table "users", :force => true do |t|
-    t.string "login",    :limit => 50, :default => "", :null => false
-    t.string "password", :limit => 40
+    t.string  "login",        :limit => 50, :default => "", :null => false
+    t.string  "password",     :limit => 40
+    t.string  "user_name"
+    t.string  "user_address"
+    t.integer "user_fone",    :limit => 11
   end
 
   add_index "users", ["login", "password"], :name => "login"

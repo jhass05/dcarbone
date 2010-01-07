@@ -13,7 +13,7 @@ class Admin::UsersController < Admin::BaseController
     render :action => 'list'
   end
   def list
-    @title = 'Lista de Usuarios'
+    @title = 'Admin User List'
     @users = User.find(:all)
   end
 

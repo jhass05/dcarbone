@@ -3,7 +3,7 @@
 
   <h1>Editar Usuario</h1>
   <ul class="navigation secondary">
-    <li><a href="/admin/users/list/">Volver a Lista de Usuarios</a></li>
+    <li><a href="/admin/users/list/">Back to User List</a></li>
   </ul>
 
   <%= render :partial => "form" %>
