@@ -45,8 +45,14 @@
 <h3>Pedido</h3>	
 
    <span id="DisplayDiv"></span>
-  <!-- <div id="DisplayPrice"></div>-->
-   <div class="price">Total: </div>
+  
+  <div class="price"> <%= link_to_remote("Total", :controller => 'store',
+                                 :url => {:action => :price},
+                                 :update=> 'Price')%>
+  </div>
+  <br>            
+   <div id="Price" class="price">0</div>
+
    
    
    

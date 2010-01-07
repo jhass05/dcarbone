@@ -33,9 +33,11 @@ class StoreController < ApplicationController
   # You could set this to be:
   #   @@action_after_checkout = 'finish_order'
   @@action_after_checkout = 'select_shipping_method'
- 
+  @@total= 0  
+  
   def initialize
-      @price = 0
+      @total_price = 0
+     
   end
    
   # Our simple store index
@@ -61,8 +63,10 @@ class StoreController < ApplicationController
       flash[:notice] = "Sorry, we couldn't find the product you were looking for"
       redirect_to :action => 'index' and return false
     end
+    
     @title = @product.name
     @price = @product.price
+    @@total = @@total + @price
     @images = @product.images.find(:all)
     @default_image = @images[0]
     @variations = @product.variations.find(
@@ -70,26 +74,25 @@ class StoreController < ApplicationController
       :order => 'name ASC',
       :conditions => 'quantity > 0'
     )
+    
     render :partial => 'pedido'
     
   end
-
+  
   def replacer_pedido
-     render(:layout => false)
+     render :partial => 'replacer_pedido'  
+  end  
+
+  def price
+   
+     @total_price = @@total
+     render :partial => 'price'
+    
   end
-  
-  def precio
-     render (:layout => false)
-  end
-  
-  def calcular_total_pedido
       
-      
-      
-  end
-  
   def search
     @search_term = params[:search_term]
+    
     @title = "Search Results for: #{@search_term}"
     @products = Product.paginate(
       :order => 'name ASC',

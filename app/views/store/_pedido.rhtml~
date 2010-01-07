@@ -1,5 +1,5 @@
 <!--INICIO PEDIDO-->
-<div id="<%= @title%>">
+<div id="<%= Time.new%>">
 <table>
 	<tr>
 		<td style= padding-left:4px;>
@@ -9,15 +9,15 @@
 		</td>
 		<td style= padding-left:4px> 
 		    <label class= inline >
-				<span class= money ><%= price%> </span>
+				<span class= money ><%= @price%> </span>
 			</label>
 		</td>
+                <span class= money><%= @total_price%></span>
 		<td style= padding-left:4px> 
 		    <label class= inline >
-				<span class= money><%= link_to_remote image_tag('delete.png'),:update => @title,
-				                                                              :url => {:action => :replacer_pedido}
-	                                   
-				 %>
+				<span class= money><%= link_to_remote image_tag('delete.png'),
+                                                                      :update => Time.new,
+				                                      :url => {:action => :replacer_pedido}%>
 				</span>
 			</label>
 		</td>
