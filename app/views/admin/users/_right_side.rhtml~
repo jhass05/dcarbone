@@ -6,7 +6,7 @@
 
 	<h1>Roles</h1>
 	<p>
-		<%= link_to 'Administrar Roles', {:controller => 'roles', :action => 'index'}, :class => 'action' %>
+		<%= link_to 'Manage Roles', {:controller => 'roles', :action => 'index'}, :class => 'action' %>
 	</p>
 	
 

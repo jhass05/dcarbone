@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100107151142) do
 
   create_table "content_node_types", :force => true do |t|
     t.string "name", :limit => 50, :default => "", :null => false
@@ -283,8 +283,11 @@ ActiveRecord::Schema.define(:version => 0) do
   add_index "user_uploads", ["created_on", "type"], :name => "creation"
 
   create_table "users", :force => true do |t|
-    t.string "login",    :limit => 50, :default => "", :null => false
-    t.string "password", :limit => 40
+    t.string  "login",        :limit => 50, :default => "", :null => false
+    t.string  "password",     :limit => 40
+    t.string  "user_name"
+    t.string  "user_address"
+    t.integer "user_fone",    :limit => 11
   end
 
   add_index "users", ["login", "password"], :name => "login"
