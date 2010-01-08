@@ -33,11 +33,12 @@ class StoreController < ApplicationController
   # You could set this to be:
   #   @@action_after_checkout = 'finish_order'
   @@action_after_checkout = 'select_shipping_method'
-  @@total= 0  
-  
+  @@total = 0  
+  @@a = []
+
   def initialize
       @total_price = 0
-     
+      
   end
    
   # Our simple store index
@@ -67,6 +68,8 @@ class StoreController < ApplicationController
     
     @title = @product.name
     @price = @product.price
+    ped = {'product' => @title, 'price' => @price}
+    @@a << ped
     @@price = @price
     @@total = @@total + @price
     @images = @product.images.find(:all)
@@ -99,6 +102,14 @@ class StoreController < ApplicationController
      @buyer = Buyer.new 
      @buyer.attributes = params[:buyer]       
      @buyer.save
+ 
+     while(@@a.empty? == false)  
+        @sale = Sale.new
+        @x = @@a.pop
+        @sale.product = @x['product']
+        @sale.price   = @x['price']
+        @sale.save
+     end
      @@total = 0
      redirect_to "/store"	
   end

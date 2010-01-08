@@ -3,6 +3,7 @@ class CreateBuyers < ActiveRecord::Migration
     create_table :buyers do |t|
        
       t.column :name,    :string
+      
       t.column :nit,     :integer 
      
     end

@@ -9,13 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100108154755) do
+ActiveRecord::Schema.define(:version => 20100107151221) do
 
   create_table "buyers", :force => true do |t|
     t.string  "name"
-    t.integer "nit",     :limit => 11
-    t.string  "address"
-    t.string  "phone"
+    t.integer "nit",  :limit => 11
   end
 
   create_table "content_node_types", :force => true do |t|
@@ -250,14 +248,6 @@ ActiveRecord::Schema.define(:version => 20100108154755) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer "role_id", :limit => 11
     t.integer "user_id", :limit => 11
-  end
-
-  create_table "sales", :force => true do |t|
-    t.string   "product"
-    t.float    "price"
-    t.date     "date_sale"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "sections", :force => true do |t|
