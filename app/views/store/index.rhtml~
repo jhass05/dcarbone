@@ -53,9 +53,6 @@
   <br>            
    <div id="Price" class="price">0</div>
 
-   
-   
-   
 	<%= form_tag :action => 'close_sale' %>
 		<div class="form_block">
 		    <p>
@@ -63,20 +60,28 @@
 		        <%= text_field 'buyer', 'name', :class => 'textInput', :size => 25  %> 
 	            </p>
 		    <p>
+			<%= make_label('Direccion', true) %>
+                        <%= text_field 'buyer', 'address', :class => 'textInput', :size => 25  %>
+		    </p>
+		    
+                    <p>
+			<%= make_label('Telefono', true) %>
+                        <%= text_field 'buyer', 'phone', :class => 'textInput', :size => 25  %>
+		    </p>
+                    
+                    <p>
 			<%= make_label('Nit', true) %>
                         <%= text_field 'buyer', 'nit', :class => 'textInput', :size => 25  %>
 		    </p>
-		    
                     			
 	            <p>
 	                <%= submit_tag "Terminar", :class => 'button twohundred' %>
-	                <div class="clear">&nbsp;</div>
 	             </p>
 		</div>
 	</form>
 
-<p>
-		<%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
+        <p>
+	<%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
 	</p>
         
          
