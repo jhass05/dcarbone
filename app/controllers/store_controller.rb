@@ -53,7 +53,8 @@ class StoreController < ApplicationController
       :page => params[:page],
       :per_page => 12
     )
-  
+    
+    @@total = 0 
   end
   
   def pedido

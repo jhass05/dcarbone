@@ -292,7 +292,7 @@ div.price {
 	padding: 5px;
 	cursor: pointer;
 	cursor: hand;
-	text-align: center;
+	text-align: right;
 	display:block;
 }
 

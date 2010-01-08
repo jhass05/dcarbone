@@ -66,14 +66,19 @@
 			<%= make_label('Nit', true) %>
                         <%= text_field 'buyer', 'nit', :class => 'textInput', :size => 25  %>
 		    </p>
-					
+		    
+                    			
 	            <p>
 	                <%= submit_tag "Terminar", :class => 'button twohundred' %>
-	                <div class="clear">&nbsp;</div>
 	             </p>
 		</div>
 	</form>
-   
+
+        <p>
+	<%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
+	</p>
+        
+         
     <div class="line">&nbsp;</div>
     		
 </div>

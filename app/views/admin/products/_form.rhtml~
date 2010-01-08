@@ -111,7 +111,7 @@
 	
 	</div>
 
-	<div class="float">
+	<div class="padLeft">
 		<p>
 			<label for="product_description">Descripcion</label>
 			
