@@ -283,6 +283,14 @@ class Admin::OrdersController < Admin::BaseController
     
     send_file(save_to, :type => "text/#{params[:format]}")
   end
+
+  def flujo_caja
+     render :partial => 'flujo_caja', :layout => true
+  end
+  def producto_vendido
+     render :partial => 'producto_vendido', :layout => true
+  end	
+
   
   # PRIVATE METHODS ===========================================================
   private

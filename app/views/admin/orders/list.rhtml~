@@ -1,7 +1,7 @@
 <div id="left">
 	<h1><%=h @title %></h1>
 
-  <%= generate_navigation(@list_options, @viewing_by, 'list') %>
+<!--  <%= generate_navigation(@list_options, @viewing_by, 'list') %> -->
 
 	<% if @search_title %>
 		<h2><%=h @search_title %></h2>
@@ -14,14 +14,15 @@
 		<!--<p>Would you like to try another view?</p>-->
 			<ul>
 				<li>
-					<a href="/">Flujo se Caja</a>
+					<%= link_to "Flujo de caja", :action => 'flujo_caja' %>
+                                        
 					<br/>
-					<span class="info">Muesta la cantidad de las ventas de las ventas.</span>
+					<span class="info">Muesta el reporte de ventas en un rango de fechas.</span>
 				</li>
 				<li>
 					<a href="/">Producto mas vendido</a>
 					<br/>
-					<span class="info">Muestra el producto mas vendido.</span>
+					<span class="info">Muestra el producto mas vendido en un rango de fechas.</span>
 				</li>
 			<!--<li>
 					<a href="/admin/orders/list?key=Ready+To+Ship">Ready To Ship</a>

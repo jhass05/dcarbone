@@ -1,0 +1,14 @@
+<h1>Producto mas Vendido</h1>
+<ul class="navigation secondary">
+    <li><a href="/admin/orders/list/">Regresar a lista de reportes</a></li>
+</ul>
+<h3>seleccione un rango de fechas</h3>
+<p>
+	<%= make_label('Fecha Inicio') %>
+	<%= date_select 'product', 'date_available'  %>
+</p>
+<p>
+	<%= make_label('Fecha Fin') %>
+	<%= date_select 'product', 'date_available'  %>
+</p>
+<%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
