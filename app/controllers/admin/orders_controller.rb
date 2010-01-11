@@ -285,10 +285,11 @@ class Admin::OrdersController < Admin::BaseController
   end
 
   def flujo_caja
-     render :partial => 'flujo_caja', :layout => true
+     
   end
+
   def producto_vendido
-     render :partial => 'producto_vendido', :layout => true
+     
   end	
 
   

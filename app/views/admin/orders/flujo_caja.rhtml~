@@ -39,5 +39,5 @@
 
 </div>
 
-<%= render(:partial => 'right_side') %>
+
 

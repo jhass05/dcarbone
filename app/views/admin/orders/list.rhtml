@@ -1,65 +1,25 @@
 <div id="left">
 	<h1><%=h @title %></h1>
 
-<!--  <%= generate_navigation(@list_options, @viewing_by, 'list') %> -->
-
-	<% if @search_title %>
-		<h2><%=h @search_title %></h2>
-	<% end %>
-
 	<% if @orders.length == 0 then %>
 		<!--<h4>No orders have been taken that apply to this view.</h4>-->
 		<h4>Ninguna venta se realizo hasta el momento.</h4>
 		<div class="padLeft">
-		<!--<p>Would you like to try another view?</p>-->
 			<ul>
-				<li>
-					<%= link_to "Flujo de caja", :action => 'flujo_caja' %>
-                                        
-					<br/>
-					<span class="info">Muesta el reporte de ventas en un rango de fechas.</span>
-				</li>
-				<li>
-					<%= link_to "Producto mas Vendido", :action => 'producto_vendido' %>
-					
-					<br/>
+			    <li>
+				<%= link_to "Flujo de caja", :action => 'flujo_caja' %>        
+				<br/>
+				     <span class="info">Muesta el reporte de ventas en un rango de fechas.</span>
+			    </li>
+			    <li>
+				<%= link_to "Producto mas Vendido", :action => 'producto_vendido' %>	
+				<br/>
 					<span class="info">Muestra el producto mas vendido en un rango de fechas.</span>
 				</li>
-			<!--<li>
-					<a href="/admin/orders/list?key=Ready+To+Ship">Ready To Ship</a>
-					<br/>
-					<span class="info">Orders that have been paid for and are ready to be shipped out.</span>
-				</li>
-			-->	
-			<!--
-				<li>
-					<a href="/admin/orders/list?key=On+Hold">On Hold</a>
-					<br/>
-					<span class="info">Orders awaiting payment, or orders that have failed to process correctly.
-					<br/>(Due to invalid data entry of credit card, address, etc)</span>
-				</li>
-			-->
-			<!--	
-				<li>
-					<a href="/admin/orders/list?key=Completed">Completed</a>
-					<br/>
-					<span class="info">Orders have been shipped and completed</span>
-				</li>
-			-->
-			<!--	
-				<li>
-					<a href="/admin/orders/list?key=All">All</a>
-					<br/>
-					<span class="info">All orders, regardless of status</span>
-				</li>
-			-->	
+			
+				
 			</ul>
 		</div>
-
-		<!--h4>Here's An Idea...</h4>
-		<div class="padLeft">
-			<p><a href="/admin/orders/new">Create a test order</a> to see how the system acts.</p>
-		</div-->
 
 	<% else %>
 
@@ -76,7 +36,8 @@
 				<th>Status</th>
 				<th>Total</th>
 			</tr>
-			<% for order in @orders %>
+			
+                        <% for order in @orders %>
 				<tr class="<%= alternate %>">
 					<td>
 					  <% unless order.name.empty? %>

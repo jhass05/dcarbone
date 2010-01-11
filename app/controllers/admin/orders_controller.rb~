@@ -285,8 +285,12 @@ class Admin::OrdersController < Admin::BaseController
   end
 
   def flujo_caja
-     render :partial => 'flujo_caja', :layout => true
+     
   end
+
+  def producto_vendido
+     
+  end	
 
   
   # PRIVATE METHODS ===========================================================
