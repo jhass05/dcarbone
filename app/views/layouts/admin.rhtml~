@@ -34,7 +34,7 @@
 
 	<div id="logo">
 		&nbsp;
-		<div id="version_number">v<%= Substruct::Version::STRING %></div>
+	<!--	<div id="version_number">v<%= Substruct::Version::STRING %></div> -->
 	</div>
 
 	<div id="navigation">
@@ -45,17 +45,18 @@
 			<li class="<%= @cname == 'products' ? 'active' : '' %>">
 				<%= link_to_section "Productos", :controller=>"/admin/products" rescue nil %>
 			</li>
+			<!--
 			<li class="<%= @cname == 'promotions' ? 'active' : '' %>">
 				<%= link_to_section "Promociones", :controller=>"/admin/promotions" rescue nil %>
 			</li>
-			<!--
 			<li class="<%= @cname == 'questions' ? 'active' : '' %>">
 				<%= link_to_section "Preguntas", :controller=>"/admin/questions" rescue nil %>
 			</li>
-			-->
+			
 			<li class="<%= @cname == 'content_nodes' ? 'active' : '' %>">
 				<%= link_to_section "Contenido", :controller=>"/admin/content_nodes" rescue nil %>
 			</li>
+			-->
 			<!--
 			<li class="<%= @cname == 'files' ? 'active' : '' %>">
 				<%= link_to_section "Archivos", :controller=>"/admin/files" rescue nil %>

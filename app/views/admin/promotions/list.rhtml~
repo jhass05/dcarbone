@@ -1,4 +1,4 @@
- <div id="left">
+<!-- <div id="left">
 	<%= render :partial => 'subnav' %>
 
 	<% if @promotions.length == 0 then %>
@@ -68,3 +68,4 @@
 
 
 <%= render(:partial => 'right_side') %>
+!>

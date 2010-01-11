@@ -1,10 +1,10 @@
-<div class="padLeft">
-<h1>Producto mas Vendido</h1>
+<%= form_tag({:action => 'save'}, :multipart => true) %>
 <div id="left">
-<ul class="navigation secondary">
+  <h1>Producto mas Vendido</h1>
+  <ul class="navigation secondary">
     <li><a href="/admin/orders/list/">Regresar a lista de reportes</a></li>
 </ul>
-</div>
+
 <h3>seleccione un rango de fechas</h3>
 <p>
 	<%= make_label('Fecha Inicio') %>
@@ -16,4 +16,23 @@
 </p>
 
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
+
+<table class="list" cellpadding="0" cellspacing="0">
+			<colgroup>
+				<col style="width:15px;"/>
+				<col style="width:70px;"/>
+				<col style="width:15px;"/>
+			
+			</colgroup>
+			<tr>
+				<th>Producto</th>
+				<th>Precio</th>
+				<th>Cantidad Vendida</th>
+			
+			</tr>
+			
+
+</table>
 </div>
+<%= render(:partial => 'right_side') %>
+</form>

@@ -1,10 +1,11 @@
 <%= form_tag({:action => 'save'}, :multipart => true) %>
 <div id="left">
-  <h1>Flujo de caja</h1>
+  <h1>Producto mas Vendido</h1>
   <ul class="navigation secondary">
-    <li><a href="/admin/orders/list/">Regresar a lista de productos</a></li>
-  </ul>
-<h3>Seleccione un rango de fechas para mostrar el producto mas vendido</h3>
+    <li><a href="/admin/orders/list/">Regresar a lista de reportes</a></li>
+</ul>
+
+<h3>seleccione un rango de fechas</h3>
 <p>
 	<%= make_label('Fecha Inicio') %>
 	<%= date_select 'product', 'date_available'  %>
@@ -16,7 +17,6 @@
 
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
 </br ></br >
-
 <table class="list" cellpadding="0" cellspacing="0">
 			<colgroup>
 				<col style="width:15px;"/>
