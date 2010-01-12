@@ -289,8 +289,13 @@ class Admin::OrdersController < Admin::BaseController
   end
 
   def producto_vendido
-     
+   
   end	
+  
+  def the_best_sellers
+    @hola= "hola" 
+    render :layout => false
+  end
 
   
   # PRIVATE METHODS ===========================================================
