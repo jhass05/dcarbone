@@ -22,7 +22,7 @@ class Admin::RolesController < Admin::BaseController
       flash[:notice] = 'Role was successfully created.'
       redirect_to :action => 'list' and return
     end
-		
+		render :action => 'edit'
   end
 
   def edit

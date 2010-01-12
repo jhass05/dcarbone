@@ -1,22 +1,22 @@
 <div id="left">
 <%= form_tag :action=>"new" %>
 
-  <h1>Nuevo Tipo de Usuario</h1>
+  <h1>listaSjasgfkjadgskjfagsk</h1>
   <ul class="navigation secondary">
-    <li><a href="/admin/roles/list/">Regresar Lista</a></li>
+    <li><a href="/admin/roles/list/">Regresar Lista tipos de Usuarios/a></li>
   </ul>
 
   <%= render_partial "form" %>
 
 	<!-- SAVE BUTTON -->
 	<div class="line" style="margin-top:20px;">&nbsp;</div>
-  <%= submit_tag 'Guardar Tipo de Usuario', :class => 'button hundred' %>
+  <%= submit_tag 'Save New Role', :class => 'button hundred' %>
 
 </form>
 </div>
 
-<!-- RIGHT 
+<!-- RIGHT -->
 <div id="right">
 	<h1>AYUDA</h1>
-</div>-->
+</div>
 <div class="clear">&nbsp;</div>

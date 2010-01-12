@@ -5,7 +5,7 @@
   <tr>
     <th>Tipos de Usuario</th>
     <th>Descripcion</th>
-    <th>Permisos</th>
+    <th>Rights</th>
   </tr>
   <% for role in @roles %>
   <tr class="<%= alternate %>">

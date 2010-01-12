@@ -3,7 +3,6 @@
   <br/>
   <%= link_to 'Crear Tipo de Usuario', {:action => 'new'}, :class => 'button hundredfifty' %>
 </div>
-<div class="clear">&nbsp;</div>
 	<!--<%= render :partial => '/admin/preferences/sidebar' %>
 	<div class="clear">&nbsp;</div>
 	<h1>Help</h1>
@@ -31,4 +30,4 @@
 	</p>
 	</div>
 </div>
->-->
+<div class="clear">&nbsp;</div>-->

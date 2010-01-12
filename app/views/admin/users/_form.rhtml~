@@ -17,7 +17,7 @@
 	<%= text_field 'user', 'login', :class => 'textInput'  %>
 </p>
 <% unless @user.new_record? %>
-  <h4>Enter password and confirmation if you wish to change password</h4>
+  <h4>Ingresa tu nueva Contraseña y confirmacion si tu quieres cambiar</h4>
 <% end %>
 <div id="change_password">
 	<p>

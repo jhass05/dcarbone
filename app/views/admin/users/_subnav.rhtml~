@@ -3,7 +3,7 @@
 	<li>
 		<%= 
 			link_to_unless_current(
-				'Admin Users',
+				'Administrar Usuarios',
 				:action => 'index'
 			)
 		%>
@@ -11,7 +11,7 @@
 	<li>
 		<%= 
 			link_to_unless_current(
-				'Customers',
+				'Personalizar',
 				:action => 'customers'
 			)
 		%>

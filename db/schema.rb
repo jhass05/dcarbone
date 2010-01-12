@@ -299,9 +299,9 @@ ActiveRecord::Schema.define(:version => 20100111203028) do
   create_table "users", :force => true do |t|
     t.string  "login",        :limit => 50, :default => "", :null => false
     t.string  "password",     :limit => 40
-    t.string  "user_name",    :limit => 50, :default => "", :null => false
-    t.string  "user_address", :limit => 50, :default => "", :null => false
-    t.integer "user_fone",    :limit => 11, :default => 0,  :null => false
+    t.string  "user_name"
+    t.string  "user_address"
+    t.integer "user_fone",    :limit => 11
   end
 
   add_index "users", ["login", "password"], :name => "login"
