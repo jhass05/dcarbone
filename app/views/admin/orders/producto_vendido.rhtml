@@ -9,12 +9,11 @@
 
 <p>
 	<%= make_label('Fecha Inicio') %>
-
-	<%= date_select 'product', 'date_available', :use_month_numbers => true  %>
+	<%= date_select :date_begin,'', :use_month_numbers => true  %>
 </p>
 <p>
 	<%= make_label('Fecha Fin') %>
-	<%= date_select 'product', 'date_available', :use_month_numbers => true  %>
+	<%= date_select :date_end, '', :use_month_numbers => true  %>
 </p>
 
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>

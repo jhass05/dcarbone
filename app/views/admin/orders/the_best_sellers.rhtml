@@ -11,15 +11,15 @@
 				<th>Cantidad Vendida</th>
 			
 			</tr>
-                        
+                       
+                  <% for best_seller in @best_sellers %>
 			<tr class="<%= alternate %>">
-				<td><%= @hola%></td>
-				<td class="numeric">50</td>
-                                <td class="numeric">50</td>
+				<td><%= best_seller.product %></td>
+				<td class="numeric"><%= best_seller.price %></td>
+				<td class="numeric"><%= best_seller.quantity%></td>
 			</tr>
+		  <% end %>
 			
 
-
-			
 
 </table>
