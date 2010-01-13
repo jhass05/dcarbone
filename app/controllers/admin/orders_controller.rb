@@ -302,7 +302,6 @@ class Admin::OrdersController < Admin::BaseController
                                                @date_begin, @date_end],
                               :group => "product") 
    
-    
     render :layout => false
   end
   

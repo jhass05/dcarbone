@@ -297,7 +297,7 @@ class Admin::OrdersController < Admin::BaseController
     @date_begin = convert_date (params[:date_begin])
     @date_end = convert_date (params[:date_end])
     @best_sellers = Sale.find(:all,
-                              :select => "product, price, COUNT(*)",                   
+                              :select => "product, price, COUNT(*) AS quantity",                   
                               :conditions => ["created_at >= ? AND created_at < ?",
                                                @date_begin, @date_end],
                               :group => "product") 

@@ -10,7 +10,6 @@
 		end
 		-%> : Substruct ADMIN</title>
 	<%= javascript_include_tag :defaults, :cache => 'default' %>
-  <%= javascript_include_tag 'substruct', 'subModal' %>
 	<%= stylesheet_link_tag 'admin', 'subModal' %>
 	<%= yield :header %>
 </head>
@@ -62,8 +61,12 @@
 				<%= link_to_section "Archivos", :controller=>"/admin/files" rescue nil %>
 			</li>
 			-->
-		  <li class="<%= @cname == 'users' ? 'active' : '' %>">
+		        <li class="<%= @cname == 'users' ? 'active' : '' %>">
 				<%= link_to_section "Usuarios", :controller=>"/admin/users" rescue nil %>
+			</li>
+
+                        <li class="<%= @cname == 'help' ? 'active' : '' %>">
+				<%= link_to_section "Ayuda", :controller=>"/admin/help" rescue nil %>
 			</li>
 		</ul>
 	</div>
@@ -75,7 +78,7 @@
 			  <br/>
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>
-			<a href="/">Sitio Ventas</a> -
+			<a href="/inicio">Sitio Ventas</a> -
 		<!--<a href="/admin/preferences/">Preferencias</a>  -->
 			<a href="http://www.wibo.com.bo/clientes/dcarbone" class="submodal-800-600">Ayuda en linea</a> -
 	   <!--	<a href="http://dev.subimage.com/projects/substruct/">Acerca Carbonazo</a> -->
@@ -91,8 +94,6 @@
 	
 	
 	</div>
-<!-- end container -->
-</div>
 <div>
 <table align="center" >
 	<tr>
@@ -107,5 +108,8 @@
 	</tr>
 	</table>
 </div>
+<!-- end container -->
+</div>
+
 </body>
 </html>
