@@ -87,6 +87,7 @@ class StoreController < ApplicationController
   def replacer_pedido
      @@total = @@total - @@price 
      @total_price = @@total
+     @@a.pop
      render :partial => 'replacer_pedido'  
   end  
 

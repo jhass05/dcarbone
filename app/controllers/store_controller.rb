@@ -100,6 +100,7 @@ class StoreController < ApplicationController
   
   def close_sale
      
+
      @buyer = Buyer.new 
      @buyer.attributes = params[:buyer]       
      @buyer.save
