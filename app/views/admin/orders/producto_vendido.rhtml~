@@ -3,24 +3,20 @@
   <h1>Los productos mas Vendidos</h1>
   <ul class="navigation secondary">
     <li><a href="/admin/orders/list/">Regresar a lista de reportes</a></li>
-</ul>
-
+  </ul>
 <h3>Seleccione un rango de fechas</h3>
-
 <p>
 	<%= make_label('Fecha Inicio') %>
-	<%= date_select :date_begin, params[:date_begin], :use_month_numbers => true  %>
+	<%= date_select :date_begin,'', :use_month_numbers => true  %>
 </p>
 <p>
 	<%= make_label('Fecha Fin') %>
-	<%= date_select :date_end, params[:date_end], :use_month_numbers => true  %>
+	<%= date_select :date_end, '', :use_month_numbers => true  %>
 </p>
-
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
 <%= form_tag %>
 <br>
 <div id=list_best_sellers></div>
-
-
 </div>
 <%= render(:partial => 'right_side') %>
+

@@ -1,4 +1,4 @@
-<%= form_tag({:action => 'save'}, :multipart => true) %>
+<%= form_remote_tag :update => "total_solds", :url => {:action => 'total_sold'}  %>
 <div id="left">
   <h1>Flujo de caja</h1>
   <ul class="navigation secondary">
@@ -7,31 +7,16 @@
 <h3>Seleccione un rango de fechas</h3>
 <p>
 	<%= make_label('Fecha Inicio') %>
-	<%= date_select 'product', 'date_available'  %>
+	<%= date_select :date_1,'', :use_month_numbers => true  %>
 </p>
 <p>
 	<%= make_label('Fecha Fin') %>
-	<%= date_select 'product', 'date_available'  %>
+	<%= date_select :date_2,'', :use_month_numbers => true  %>
 </p>
-
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
-</br>
-<table class="list" cellpadding="0" cellspacing="0">
-			<colgroup>
-				<col style="width:15px;"/>
-				<col style="width:70px;"/>
-				<col style="width:15px;"/>
-			
-			</colgroup>
-			<tr>
-				<th>Producto</th>
-				<th>Precio</th>
-				<th>Cantidad Vendida</th>
-			
-			</tr>
-			
-
-</table>
+<%= form_tag %>
+<br>
+<div id="total_solds"></div>
 </div>
 <%= render(:partial => 'right_side') %>
-</form>
+

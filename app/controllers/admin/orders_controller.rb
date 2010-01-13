@@ -294,23 +294,33 @@ class Admin::OrdersController < Admin::BaseController
   
   def the_best_sellers
    
-    @date_begin = convert_date (params[:date_begin])
-    @date_end = convert_date (params[:date_end])
+    date_begin = convert_date (params[:date_begin])
+    date_end = convert_date (params[:date_end])
     @best_sellers = Sale.find(:all,
                               :select => "product, price, COUNT(*) AS quantity",                   
                               :conditions => ["created_at >= ? AND created_at < ?",
-                                               @date_begin, @date_end],
+                                               date_begin, date_end],
                               :group => "product") 
-   
+
     render :layout => false
+
   end
   
+  def total_sold
+     date_begin = convert_date params[:date_begin]
+     date_end = convert_date params[:date_end]
+     @best_sellers = Sale.find(:all,
+                              :select => "product, price, COUNT(*) AS quantity",                   
+                              :conditions => ["created_at >= ? AND created_at < ?",
+                                               date_begin, date_end],
+                              :group => "product") 
+     @total = 0
+     render :layout => false
+  end
+
   def convert_date(obj) 
     return "#{obj['(1i)']}-#{obj['(2i)']}-#{obj['(3i)']} 00:00:00" 
   end 
-
-
-
   
   # PRIVATE METHODS ===========================================================
   private
