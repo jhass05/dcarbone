@@ -10,7 +10,7 @@ class Admin::RolesController < Admin::BaseController
   end
 
   def list
-    @title = 'Lista tipos de Usuario'
+    @title = 'Lista Tipos de Usuario'
     @roles = Role.find(:all)
   end
 

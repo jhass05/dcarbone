@@ -1,0 +1,26 @@
+<div id="left">
+	<h1>Ayuda del Sistema</h1>
+		<div class="padLeft">
+			<ul>
+			    <li>
+				<%= link_to "Manual de Usuario", :action => '' %>        
+				<br/>
+				     <span class="info">Ayuda para el usuario del sistema.</span>
+			    </li>
+			    <li>
+				<%= link_to "Manual de Administrador", :action => '' %>	
+				<br/>
+					<span class="info">Ayuda para el administrador del sistema.</span>
+				</li>
+			
+				
+			</ul>
+		</div>
+</div>
+<!-- RIGHT -->
+<div id="right">
+  <br/>
+  <%= link_to 'Crear Tipo de Usuario', {:action => 'new'}, :class => 'button hundredfifty' %>
+</div>
+<div class="clear">&nbsp;</div>
+

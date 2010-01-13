@@ -1,8 +1,13 @@
 class Admin::HelpController < ApplicationController
 
-
+   layout 'admin'   
+ 
    def index
    
+   end
+   def list
+    @title = 'AYUDA'
+    @roles = Role.find(:all)
    end
 
 end
