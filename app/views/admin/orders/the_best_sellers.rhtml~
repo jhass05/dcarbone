@@ -16,7 +16,7 @@
 			<tr class="<%= alternate %>">
 				<td><%= best_seller.product %></td>
 				<td class="numeric"><%= best_seller.price %></td>
-				<td class="numeric"><%= best_seller[2] %></td>
+				<td class="numeric"><%= best_seller.quantity%></td>
 			</tr>
 		  <% end %>
 			
