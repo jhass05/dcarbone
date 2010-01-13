@@ -19,8 +19,6 @@
 </div>
 <!-- RIGHT -->
 <div id="right">
-  <br/>
-  <%= link_to 'Crear Tipo de Usuario', {:action => 'new'}, :class => 'button hundredfifty' %>
 </div>
 <div class="clear">&nbsp;</div>
 

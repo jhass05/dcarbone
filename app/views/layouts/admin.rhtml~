@@ -65,6 +65,10 @@
 				<%= link_to_section "Usuarios", :controller=>"/admin/users" rescue nil %>
 			</li>
 
+			<li class="<%= @cname == 'help' ? 'active' : '' %>">
+				<%= link_to_section "Clientes", :controller=>"/admin/help" rescue nil %>
+			</li>
+
                         <li class="<%= @cname == 'help' ? 'active' : '' %>">
 				<%= link_to_section "Ayuda", :controller=>"/admin/help" rescue nil %>
 			</li>
@@ -79,9 +83,7 @@
 			  <span class="user_id"><%=h User.find(session[:user]).login %> - <%=h request.env["SERVER_NAME"] %></span>
 			</div>
 			<a href="/inicio">Sitio Ventas</a> -
-		<!--<a href="/admin/preferences/">Preferencias</a>  -->
-			<a href="http://www.wibo.com.bo/clientes/dcarbone" class="submodal-800-600">Ayuda en linea</a> -
-	   <!--	<a href="http://dev.subimage.com/projects/substruct/">Acerca Carbonazo</a> -->
+		
 		</div>
 	</div>
 
