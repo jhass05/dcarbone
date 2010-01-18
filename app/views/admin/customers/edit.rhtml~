@@ -1,0 +1,23 @@
+
+
+
+
+<%= form_tag :action => 'save', :id => @buyer %>
+<div id="left">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/customers">Regresar a la lista de clientes</a></li>
+  </ul>
+
+    <%= render :partial => 'form' %>
+		<div style="float:right;">
+			<%= link_to 'Eliminar Cliente', {:action => 'destroy', :id => @buyer.id}, :confirm => 'Esta seguro?', :class => 'action' %>
+		</div>
+    <%= submit_tag 'Guardar Cliente', :class => 'button hundredthirty' %>
+
+</div>
+
+<%= render(:partial => 'crud_right') %>
+
+</form>
+

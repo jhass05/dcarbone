@@ -3,15 +3,26 @@
 	<div class="padLeft">
  		 <table class="list" cellpadding="0" cellspacing="0">
   		<tr>
-  			<th aling="center">Nombre</th>
+  			<th>Nombre</th>
     			<th>Direccion</th>
     			<th>Telefono</th>
     			<th>Nit</th>
   		</tr>
+
+
+           <% for buyer in @buyers   %>
+             <tr class="<%= alternate %>">
+               <td><%= buyer.name %></td>
+               <td><%= buyer.address %></td>
+               <td><%= buyer.phone %></td> 
+               <td class="numeric"><%= buyer.nit %></td>  
+    		
+             </tr>
+           <% end %>
+
   		</table>
 	</div>
 </div>
-
 
 <!-- RIGHT -->
 <div id="right">

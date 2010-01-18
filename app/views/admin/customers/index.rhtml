@@ -8,10 +8,21 @@
     			<th>Telefono</th>
     			<th>Nit</th>
   		</tr>
+
+
+           <% for buyer in @buyers   %>
+             <tr class="<%= alternate %>">
+               <td><%= link_to(h(buyer.name), :action => 'edit', :id => buyer) %></td>
+               <td><%= buyer.address %></td>
+               <td><%= buyer.phone %></td> 
+               <td class="numeric"><%= buyer.nit %></td>  
+    		
+             </tr>
+           <% end %>
+
   		</table>
 	</div>
 </div>
-
 
 <!-- RIGHT -->
 <div id="right">
