@@ -44,50 +44,42 @@
 <div id="right">
 <h3>Pedido</h3>	
 
-   <span id="DisplayDiv"></span>
+  <span id="DisplayDiv"></span>
   
   <div class="price"> <%= link_to_remote("Total", :controller => 'store',
                                  :url => {:action => :price},
                                  :update=> 'Price')%>
   </div>
   <br>            
-   <div id="Price" class="price">0</div>
-
-	<%= form_tag :action => 'close_sale' %>
-		<div class="form_block">
-		    <p>
-		        <%= make_label('Nombre', false) %>
-		        <%= text_field 'buyer', 'name', :class => 'textInput', :size => 25  %> 
-	            </p>
-		    <p>
-			<%= make_label('Direccion', false) %>
-                        <%= text_field 'buyer', 'address', :class => 'textInput', :size => 25  %>
-		    </p>
-		    
-                    <p>
-			<%= make_label('Telefono', false) %>
-                        <%= text_field 'buyer', 'phone', :class => 'textInput', :size => 25  %>
-		    </p>
-                    
-                    <p>
-			<%= make_label('Nit', false) %>
-                        <%= text_field 'buyer', 'nit', :class => 'textInput', :size => 25  %>
-		    </p>
-                    			
-	            <p>
-	                <%= submit_tag "Terminar", :class => 'button twohundred', :confirm => 'Esta seguro de terminar el pedido?' %>
-	             </p>
-		</div>
-	</form>
-
-        <p>
-	<%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
-	</p>
-        
+  <div id="Price" class="price">0</div>
+      <% if flash[:notice] -%>
+	<div class="" id="flash" style="display:none;">
+		<p>
+			<%= flash[:notice] %>
+		</p>
+		<p>
+		<a href="#" class="action" onmousedown="new Effect.BlindUp($('flash'))">Close</a>
+		</p>
+	</div>
+	<script type="text/javascript">
+		 new Effect.BlindDown($("flash"));
+	</script>
+<% end %>
+      <div class="form_block">                
+       
+        <div id='search_nit'>
+          <%= render :partial => 'search_nit' %>
+        </div>
          
+      </div>
+        <p>   	
+        <%= link_to 'Terminar Pedido', {:controller => 'store', :action => 'close_sale'}, 
+                                                                :class => 'action' %>         
+        </p>
+        <%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
     <div class="line">&nbsp;</div>
-    		
 </div>
+
 <!--Fin Rigth-->
 
 <div class="clear">&nbsp;</div>

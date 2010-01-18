@@ -1,0 +1,25 @@
+<!-- BEGIN-->  
+
+<div id= "register_customer">   
+      
+                    <p>
+		      <label>Nombre</label> 
+                      <input type="text" name="name" id="name" value= '' />
+	            </p>
+		    <p>
+		       <label>Direccion</label> 
+                       <input type="text" name="address" id="address" value= '' />
+		    </p>
+                    <p>
+                       <label>Telefono</label> 
+                       <input type="text" name="phone" id="phone" value= '' />
+ 		    </p>
+<div>      
+<div> <%= link_to_remote ("Registrar Cliente", :controller => 'store', 
+                                      :url => {:action => :register_customer},  
+                                      :submit => "register_customer",
+                                      :update => 'register_customer',   
+                                      :id => 'register_customer_link_id')
+                                      %>
+</div>
+<!-- END -->                  

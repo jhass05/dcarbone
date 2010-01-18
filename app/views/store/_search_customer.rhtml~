@@ -1,0 +1,26 @@
+<% if @new_buyer == true %>
+                   <p>
+                      No Existe el cliente
+                   </p>
+                   <% end %>
+                   <p>
+		        <%= make_label('Nombre', false) %>
+		        <%= text_field 'buyer', 'name', :class => 'textInput', 
+                                                        :size => 25
+                                                        %> 
+	            </p>
+		    <p>
+			<%= make_label('Direccion', false) %>
+                        <%= text_field 'buyer', 'address', :class => 'textInput', 
+                                                           :size => 25
+                                                         %>
+		    </p>
+                    <p>
+			<%= make_label('Telefono', false) %>
+                        <%= text_field 'buyer', 'phone', :class => 'textInput', 
+                                                         :size => 25
+                                                         %>
+		    </p>
+                    <%= link_to 'Nuevo Pedido', {:controller => 'store', 
+                                                 :action => 'close_sale'}, 
+                                                 :class => 'action' %>

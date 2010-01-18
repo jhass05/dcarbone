@@ -1,0 +1,11 @@
+<%= form_remote_tag :update => 'customer_form', :url => {:action => 'search_customer'} %>
+		<div class="form_block">  
+                    <p>
+			<%= make_label('Nit', false) %>
+                        <%= text_field 'buyer', 'nit', :class => 'textInput', :size => 25  %>
+		    </p>
+	            <p>
+	<%= submit_tag "Buscar", :class => 'button twohundred' %>
+	            </p>
+		</div>      
+<%= form_tag %>

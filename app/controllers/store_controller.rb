@@ -35,6 +35,7 @@ class StoreController < ApplicationController
   @@action_after_checkout = 'select_shipping_method'
   @@total = 0  
   @@a = []
+   
 
   def initialize
       @total_price = 0
@@ -85,26 +86,46 @@ class StoreController < ApplicationController
   end
   
   def replacer_pedido
-     @@total = @@total - @@price 
-     @total_price = @@total
-     @@a.pop
-     render :partial => 'replacer_pedido'  
+       @@total = @@total - @@price 
+       @total_price = @@total
+       @@a.pop
+       render :partial => 'replacer_pedido'  
   end  
 
   def price
-   
-     @total_price = @@total
-     render :partial => 'price'
-    
+       @total_price = @@total
+       render :partial => 'price'
   end
   
+  def search_nit
+      
+         @nit = params[:nit] 
+         @buyer = Buyer.find_by_nit(@nit)          
+         @@nit = @nit
+        if @buyer.nil?
+           @new_buyer = true
+        else
+           @new_buyer = false
+        end
+      render :partial => 'search_nit'      
+  end
+   
+  def register_customer
+     
+        @buyer = Buyer.new
+        @buyer.nit = @@nit
+        @buyer.name = params[:name]
+        @buyer.address = params[:address]
+        @buyer.phone = params[:phone]   
+        @buyer.save
+      
+     
+      render :partial => 'msj_customer'
+
+  end
+
   def close_sale
      
-
-     @buyer = Buyer.new 
-     @buyer.attributes = params[:buyer]       
-     @buyer.save
- 
      while(@@a.empty? == false)  
         @sale = Sale.new
         @x = @@a.pop
@@ -113,9 +134,9 @@ class StoreController < ApplicationController
         @sale.save
      end
      @@total = 0
-     redirect_to "/store"	
+     flash[:notice] = "Se termino el pedido"
+     redirect_to '/store'
   end
-
   
       
   def search

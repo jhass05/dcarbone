@@ -1,0 +1,14 @@
+<!-- BEGIN -->
+<% if @new_buyer == true %>
+El cliente con el nit, <%= @nit%> no esta registrado. 
+<% end %>
+<% if @new_buyer == false %>
+El cliente, <%= @buyer.name %> con el nit <%= @nit %> esta registrado.
+<% end %>
+       
+        
+
+  
+<!-- END -->
+
+

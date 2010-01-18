@@ -1,0 +1,29 @@
+  
+                   <% if @new_buyer == true %>
+                   <
+                 
+                     <h4> Nuevo cliente </h4> 
+          <%= form_tag :action = 'save_customer', :html =>{:id => 'form_save'}  %>
+                       <p>
+		        <%= make_label('Nombre', false) %>
+		        <%= text_field :name,'', :class => 'textInput', 
+                                                        :size => 25
+                                                        %> 
+	            </p>
+		    <p>
+			<%= make_label('Direccion', false) %>
+                        <%= text_field :address,'', :class => 'textInput', 
+                                                           :size => 25
+                                                         %>
+		    </p>
+                    <p>
+			<%= make_label('Telefono', false) %>
+                        <%= text_field :phone,'', :class => 'textInput', 
+                                                         :size => 25
+                                                         %>
+		    </p>
+                   <%= submit_tag 'Registrar Cliente' %>
+                   <% else %>
+                     <h3>Cliente: <%= @buyer.name %></h3>
+                   <% end %> 
+                  

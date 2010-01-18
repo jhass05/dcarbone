@@ -1,0 +1,21 @@
+<!-- BEGIN -->
+<% if @new_buyer == true %>
+El Cliente con el Nit, <%= @nit%> no esta registrado. 
+<% end %>
+<% if @new_buyer == false %>
+El Cliente, <%= @buyer.name %> con el Nit, <%= @nit %> esta registrado.
+<% end %>
+         <label>Nit</label> 
+         <input type="text" name="nit" id="nit" value= '<%= @nit %>' />
+         <%= link_to_remote ("Buscar", :controller => 'store', 
+                                      :url => {:action => :search_nit},  
+                                      :submit => "search_nit",   
+                                      :id => 'search_form_link_id',
+                                      :update => 'search_nit')
+                                      %>
+<% if @new_buyer == true %>
+      <%= render :partial => 'customer_register'%>
+<% end %>
+<!-- END -->
+
+
