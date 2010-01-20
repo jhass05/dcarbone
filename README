@@ -2,14 +2,9 @@
 
 the database in called carbonazo_development
 after it, typed: rake substruct:db:bootstrap
+after this typed:  rake db:migrate
 
 
 
 
 
-
-==========CREAR PRODUCTOS===============
-
-- Cuandos se crea un producto especificando el contenido, para la correcta insercion
-  cuando se tiene mas de un contenido, se debe guardar primero todo el producto 
-  y despues ingresar otro contenido y guardar todo el producto.  

@@ -19,7 +19,7 @@ class Admin::RolesController < Admin::BaseController
     @role = Role.new(params[:role])
 		@rights = Right.find(:all, :order => 'name ASC')
     if request.post? and @role.save
-      flash[:notice] = 'Role was successfully created.'
+      flash[:notice] = 'El tipo de usuario fue creado satisfactoriamente'
       redirect_to :action => 'list' and return
     end
 		
@@ -34,7 +34,7 @@ class Admin::RolesController < Admin::BaseController
 		
 		# Update user
     if request.post? and @role.save
-      flash[:notice] = 'Role was successfully updated.'
+      flash[:notice] = 'El tipo de usuario fue actualizado'
       redirect_to :action => 'list'
     end
   end

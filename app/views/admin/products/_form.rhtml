@@ -17,7 +17,7 @@
 		
 
 		<div class="float">
-			<%= make_label('Precio') %>
+			<%= make_label('Precio', true) %>
 			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
 		</div>
         
