@@ -13,16 +13,3 @@
 	<input name="<%= "#{name}[][#{name}_data_temp]" %>" type="hidden" />
 </p>
 
-<p>
-	<a href="#" class="action" onclick="addEmptyUpload();return false;">Adicionar Imagen</a>
-	<script language="javascript" type="text/javascript">
-		// Adds an empty file upload html element to the form.
-		function addEmptyUpload() {
-			var new_upload_box = $('<%= name %>_empty_file_upload').cloneNode(true);
-			new_upload_box.style.display = "none";
-			new_upload_box.id = '';
-			$('<%= name %>_file_upload_container').appendChild(new_upload_box);
-			new Effect.Appear(new_upload_box);
-		}
-	</script>
-</p>

@@ -1,5 +1,5 @@
 --- 
 role_00001: 
-  name: Administrador
+  name: Administrator
   id: 1
   description: Acceso total al Sistema.

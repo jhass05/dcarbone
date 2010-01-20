@@ -10,7 +10,7 @@ class Admin::RolesController < Admin::BaseController
   end
 
   def list
-    @title = 'Lista Usuario'
+    @title = 'Lista Tipos de Usuario'
     @roles = Role.find(:all)
   end
 
@@ -30,7 +30,7 @@ class Admin::RolesController < Admin::BaseController
     @role = Role.find(params[:id])
     @role.attributes = params["role"]
 		
-		@rights = Right.find(:all, :order => 'name ASC')
+		#@rights = Right.find(:all, :order => 'name ASC')
 		
 		# Update user
     if request.post? and @role.save

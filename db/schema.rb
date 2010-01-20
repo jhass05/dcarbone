@@ -9,14 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100111203028) do
-
-  create_table "buyers", :force => true do |t|
-    t.string  "name"
-    t.integer "nit",     :limit => 11
-    t.string  "address"
-    t.string  "phone"
-  end
+ActiveRecord::Schema.define(:version => 0) do
 
   create_table "content_node_types", :force => true do |t|
     t.string "name", :limit => 50, :default => "", :null => false
@@ -252,13 +245,6 @@ ActiveRecord::Schema.define(:version => 20100111203028) do
     t.integer "user_id", :limit => 11
   end
 
-  create_table "sales", :force => true do |t|
-    t.string   "product"
-    t.float    "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sections", :force => true do |t|
     t.string  "name",      :limit => 100, :default => "", :null => false
     t.integer "rank",      :limit => 11
@@ -297,11 +283,8 @@ ActiveRecord::Schema.define(:version => 20100111203028) do
   add_index "user_uploads", ["created_on", "type"], :name => "creation"
 
   create_table "users", :force => true do |t|
-    t.string  "login",        :limit => 50, :default => "", :null => false
-    t.string  "password",     :limit => 40
-    t.string  "user_name"
-    t.string  "user_address"
-    t.integer "user_fone",    :limit => 11
+    t.string "login",    :limit => 50, :default => "", :null => false
+    t.string "password", :limit => 40
   end
 
   add_index "users", ["login", "password"], :name => "login"

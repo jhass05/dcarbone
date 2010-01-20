@@ -8,7 +8,7 @@
 		else
 			h controller.controller_name
 		end
-		-%> : Substruct ADMIN</title>
+		-%> : D' CARBONE ADMIN</title>
 	<%= javascript_include_tag :defaults, :cache => 'default' %>
 	<%= stylesheet_link_tag 'admin', 'subModal' %>
 	<%= yield :header %>
@@ -65,8 +65,8 @@
 				<%= link_to_section "Usuarios", :controller=>"/admin/users" rescue nil %>
 			</li>
 
-			<li class="<%= @cname == 'help' ? 'active' : '' %>">
-				<%= link_to_section "Clientes", :controller=>"/admin/help" rescue nil %>
+			<li class="<%= @cname == 'customers' ? 'active' : '' %>">
+				<%= link_to_section "Clientes", :controller=>"/admin/customers" rescue nil %>
 			</li>
 
                         <li class="<%= @cname == 'help' ? 'active' : '' %>">

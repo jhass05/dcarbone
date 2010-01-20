@@ -1,4 +1,9 @@
 --- 
+right_00009: 
+  name: Reportes - CRUD
+  actions: new,create,edit,update,destroy
+  id: 9
+  controller: orders
 right_00010: 
   name: Reportes - Ver 
   actions: index,list,search,edit,show

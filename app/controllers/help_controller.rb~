@@ -1,2 +1,4 @@
 class HelpController < ApplicationController
+
+    layout 'main'
 end
