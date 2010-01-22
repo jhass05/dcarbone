@@ -1,0 +1,15 @@
+<%= form_tag({:action => 'save'}, :multipart => true) %>
+<div id="left">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/insumos/list/">Regresar a lista de insumos</a></li>
+  </ul>
+
+    <%= render :partial => 'form' %>
+    <%= submit_tag "Guardar Nuevo Producto", :class => 'button hundredfifty' %>
+
+</div>
+
+ <%= render(:partial => 'crud_right') %>
+ 
+</form>

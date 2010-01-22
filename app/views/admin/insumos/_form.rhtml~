@@ -1,7 +1,7 @@
-<%= error_messages_for 'product' %>
+<%= error_messages_for 'insumo' %>
 
 <!-- 
-	PRODUCT AND VARIATIONS ######################################################
+	INSUMOS ######################################################
 -->
 <div class="padLeft">
 	<h2>Producto</h2>
@@ -92,20 +92,7 @@
 			</p>
 		</div>
 
-		<div class="float">
-		    <p>
-				<%= make_label('Height') %>
-				<%= text_field 'product', 'size_height', :size => '10', :class => 'textInput'  %>
-				<br/>
-				<span class="info">(inches)</span>
-			</p>
-            <p>
-				<%= make_label('Weight') %>
-				<%= text_field 'product', 'weight', :size => '10', :class => 'textInput'  %>
-				<br/>
-				<span class="info">(pounds)</span>
-			</p>
-		</div>
+		
 		-->
 		<div class="clear">&nbsp;</div>
 	
@@ -113,30 +100,22 @@
 
 	<div class="padLeft">
 		<p>
-			<label for="product_description">Descripcil&oacute;n</label>
-			
-			<!--
-			<span class="info">
-		    HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
-		    </span>
-		    -->
-			
+			<label for="product_description">Descripci&oacute;n</label>
+			s	
 			<br/>
-			<%= text_area 'product', 'description', :rows => 14, :class => 'textArea'  %>
+			<%= text_area 'insumo', 'description', :rows => 14, :class => 'textArea'  %>
 		</p>
 	</div>
 
 	<div class="clear">&nbsp;</div>
 </div>
 
-<%= render :partial => 'image_upload' %>
 
 <!--
 <br/>
 <div class="line">&nbsp;</div>
 -->
 
-<%= render :partial => 'product_upload' %>
 
 <!--
 <br/>

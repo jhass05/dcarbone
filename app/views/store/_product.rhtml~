@@ -23,8 +23,7 @@
       <%= link_to_remote(image, :controller => 'store', 
                                 :url => {:action => :pedido, :id => product.code }, 
                                 :update => 'DisplayDiv',  
-                                :position => :before,
-                                :complete => "$('indicator').show( )") %>
+                                :position => :before) %>
                
     
     </div>

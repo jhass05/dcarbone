@@ -34,6 +34,11 @@ right_00004:
   actions: "*"
   id: 4
   controller: products
+right_00005: 
+  name: Insumos - Admin
+  actions: "*"
+  id: 5
+  controller: insumos
 right_00007: 
   name: Roles - Admin
   actions: "*"

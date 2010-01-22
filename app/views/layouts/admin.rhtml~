@@ -8,7 +8,7 @@
 		else
 			h controller.controller_name
 		end
-		-%> : D' CARBONE ADMIN</title>
+		-%> : D' CARBONE ADMINISTRADOR</title>
 	<%= javascript_include_tag :defaults, :cache => 'default' %>
 	<%= stylesheet_link_tag 'admin', 'subModal' %>
 	<%= yield :header %>
@@ -44,14 +44,12 @@
 			<li class="<%= @cname == 'products' ? 'active' : '' %>">
 				<%= link_to_section "Productos", :controller=>"/admin/products" rescue nil %>
 			</li>
-			<!--
-			<li class="<%= @cname == 'promotions' ? 'active' : '' %>">
-				<%= link_to_section "Promociones", :controller=>"/admin/promotions" rescue nil %>
-			</li>
-			<li class="<%= @cname == 'questions' ? 'active' : '' %>">
-				<%= link_to_section "Preguntas", :controller=>"/admin/questions" rescue nil %>
-			</li>
 			
+                        
+			<li class="<%= @cname == 'questions' ? 'active' : '' %>">
+				<%= link_to_section "Insumos", :controller=>"/admin/insumos" rescue nil %>
+			</li>
+			<!--
 			<li class="<%= @cname == 'content_nodes' ? 'active' : '' %>">
 				<%= link_to_section "Contenido", :controller=>"/admin/content_nodes" rescue nil %>
 			</li>

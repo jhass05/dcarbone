@@ -44,7 +44,7 @@ class StoreController < ApplicationController
    
   # Our simple store index
   def index
-    @title = "store"
+    @title = "Productos"
 		@tags = Tag.find_alpha
 		@tag_names = nil
 		@viewing_tags = nil
@@ -120,7 +120,7 @@ class StoreController < ApplicationController
         @buyer.save
       
      
-     # render :partial => 'msj_customer'
+      render :partial => 'msj_customer'
 
   end
 
