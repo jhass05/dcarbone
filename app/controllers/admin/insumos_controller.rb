@@ -14,6 +14,7 @@ class Admin::InsumosController < Admin::BaseController
       :page => params[:page],
       :per_page => 30
     )
+   
   end
  
   def new
@@ -38,11 +39,11 @@ class Admin::InsumosController < Admin::BaseController
     else
       @new_product = true
       @title = "Nuevo Insumo"
-      @product = Insumo.new
+      @insumo = Insumo.new
     end
-    @Insumo.attributes = params[:insumo]      
-    @Insumo.save
-			
+    @insumo.attributes = params[:insumo]      
+    @insumo.save
+    render :action => 'edit' and return			
   end
 
   def destroy

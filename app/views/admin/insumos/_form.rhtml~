@@ -4,52 +4,30 @@
 	INSUMOS ######################################################
 -->
 <div class="padLeft">
-	<h2>Producto</h2>
+	<h2>Insumo</h2>
 	<div class="padLeft">
 		<div class="float">
 			<%= make_label('Nombre', true) %>
-			<%= text_field 'product', 'name', :class => 'textInput', :size => 30  %>
+			<%= text_field 'insumo', 'name', :class => 'textInput', :size => 30  %>
 		</div>
 		<div class="float">
-			<%= make_label('Codigo Producto', true) %>
-			<%= text_field 'product', 'code', :class => 'textInput', :size => 12 %>
+			<%= make_label('Codigo Insumo', true) %>
+			<%= text_field 'insumo', 'code', :class => 'textInput', :size => 12 %>
 		</div>
-		
-
 		<div class="float">
-			<%= make_label('Precio', true) %>
-			<%= text_field 'product', 'price', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0  %>
+			<%= make_label('Precio/Unidad') %>
+			<%= text_field 'insumo', 'price', :class => 'textInput numeric', :size => 6 %>
+                        <%= text_field 'insumo', 'unit', :class => 'textInput numeric', :size => 6 %>
 		</div>
-        
-	<div class="floatHidden">
+<div class="clear">&nbsp;</div>
+	        <div>
 			<%= make_label('Cantidad') %>
-			<%= text_field 'product', 'quantity', :class => 'textInput numeric', :size => 6, :disabled => @product.variations.size > 0, :value => '0'; %>
+			<%= text_field 'insumo', 'quantity', :class => 'textInput numeric', :size => 6 %>
+                      
 		</div>
-	
-		<div class="clear"></div>
-		<% if @product.variations.size > 0 %>
-			<div class="hlt" style="padding:10px; text-align: center;">
-				Cuando llenes contenido, el precio del producto no sera<br/>editable, este se calculara con los precios del contenido.
-			</div>
-		<% end %>
-
 	</div>
-
-	<!-- PRODUCT VARIATIONS -->
-
-<!--<h2>Contenido</h2>-->
-
-	<div class="padLeft">
-
-		<div id="variation_container">
-		
-		
-		</div>
-	
-	</div>
-
 </div>
-
+<div class="clear">&nbsp;</div>
 <!-- 
 	DETAILS #####################################################################
 -->
@@ -57,66 +35,25 @@
 <h1>Detalles</h1>
 
 <div class="padLeft">
-	<div class="float" style="width:230px;">
-       
-        <!--
-		<p>
-			<label>
-				<%= check_box('product', 'is_discontinued', :class => 'inline') %> 
-				El producto esta descontinuado 
-			</label>
-			<span class="info">
-				El producto esta descontinuado pero se mostrara hasta que exista mas en stock.
-			</span>
-		</p>
+	<div class="float" style="width:350px;">
+        	
+		    <p>
+			<%= make_label('Fecha y Hora de Ingreso') %>
+			<%= datetime_select 'insumo', 'date_ingress', :order => [:day, :month, :year],
+                           :use_month_names =>  %w( Enero Febrero Marzo Abril Mayo Junio Julio 
+                                                    Agosto Septiembre Octubre Noviembre  Diciembre) %>
+		    </p>
+	
+	<div class="clear">&nbsp;</div>
 	
 		<p>
-			<%= make_label('Fecha de disponibilidad') %>
-			<%= date_select 'product', 'date_available'  %>
-		</p>
-
-        
-		<div class="float">
-		    <p>
-				<%= make_label('Width') %>
-				<%= text_field 'product', 'size_width', :size => '10', :class => 'textInput'  %>
-				<br/>
-				<span class="info">(inches)</span>
-			</p>
-			
-		    <p>
-				<%= make_label('Depth') %>
-				<%= text_field 'product', 'size_depth', :size => '10', :class => 'textInput'  %>
-				<br/>
-				<span class="info">(inches)</span>
-			</p>
-		</div>
-
-		
-		-->
-		<div class="clear">&nbsp;</div>
-	
-	</div>
-
-	<div class="padLeft">
-		<p>
-			<label for="product_description">Descripci&oacute;n</label>
-			s	
+		   <label for="product_description">Descripci&oacute;n</label>	
 			<br/>
-			<%= text_area 'insumo', 'description', :rows => 14, :class => 'textArea'  %>
+			<%= text_area 'insumo', 'description', :rows => 5, :class => 'textArea'  %>
 		</p>
 	</div>
-
 	<div class="clear">&nbsp;</div>
 </div>
-
-
-<!--
-<br/>
-<div class="line">&nbsp;</div>
--->
-
-
 <!--
 <br/>
 <div class="line">&nbsp;</div> 

@@ -7,7 +7,7 @@
 
     <%= render :partial => 'form' %>
 		<div style="float:right;">
-			<%= link_to 'Borrar Este Insumo', {:action => 'destroy', :id => @insumo}, :confirm => 'Esta seguro?', :class => 'action' %>
+			<%= link_to 'Borrar Este Insumo', {:action => 'destroy', :id => @product}, :confirm => 'Esta seguro?', :class => 'action' %>
 		</div>
     <%= submit_tag 'Guardar Este Insumo', :class => 'button hundredthirty' %>
 

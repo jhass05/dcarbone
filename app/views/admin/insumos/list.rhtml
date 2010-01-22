@@ -4,7 +4,7 @@
   <% if @search_term || @list_options %>
   <!-- Navigation back to all products list -->
   <p>
-    <a href="/admin/products/list/">Todos los Insumos...</a>
+    <a href="/admin/insumos/list/">Todos los Insumos...</a>
   </p>
   <% end %>
 
@@ -14,14 +14,14 @@
   <table class="list" cellpadding="0" cellspacing="0">
     <colgroup>
       <col style="width:150px;" />
-      <col style="width:100px;" />      
-      <col style="width:60px;" />
-      <col style="width:60px;" />
+      <col style="width:150px;" />      
+      <col style="width:30px;" />
+      <col style="width:30px;" />
     </colgroup>
     <tr>
       <th>Nombre</th>
-      <th>Fecha Ingreso</th>
-      <th class="numeric">Precio</th>
+      <th>Fecha y Hora de Ingreso</th>
+      <th class="numeric">Precio/Unidad</th>
       <th class="numeric">Cantidad</th> 
     </tr>
 
@@ -29,8 +29,8 @@
   <%   for insumo in @insumos   %>
     <tr class="<%= alternate %>">
       <td><%= link_to(h(insumo.name), :action => 'edit', :id => insumo) %></td>
-      <td><%= insumo.date_ingress %></td>
-      <td class="numeric"><%= sub_number_to_currency(insumo.price) %></td>  
+      <td><%= insumo.date_ingress.to_s(:db) %></td>
+      <td class="numeric"><%= sub_number_to_currency(insumo.price)+"/"+insumo.unit %></td>  
       <td class="numeric"><%= insumo.quantity %></td>   
     </tr>
     <% end %>
