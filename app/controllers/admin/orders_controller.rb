@@ -300,10 +300,9 @@ class Admin::OrdersController < Admin::BaseController
                               :select => "product, price, COUNT(*) AS quantity",                   
                               :conditions => ["created_at >= ? AND created_at < ?",
                                                date_begin, date_end],
-                              :group => "product") 
-
+                              :group => "product",
+                              :order => "quantity DESC") 
     render :layout => false
-
   end
   
   def total_sold
@@ -313,7 +312,7 @@ class Admin::OrdersController < Admin::BaseController
                               :select => "product, price, COUNT(*) AS quantity",                   
                               :conditions => ["created_at >= ? AND created_at < ?",
                                                date_begin, date_end],
-                              :group => "product") 
+                              :group => "product" ) 
      @total = 0
      render :layout => false
   end

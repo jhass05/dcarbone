@@ -11,7 +11,7 @@
 </p>
 <p>
 	<%= make_label('Fecha Fin') %>
-	<%= date_select :date_end, '', :use_month_numbers => true  %>
+	<%= date_select :date_end,'', :use_month_numbers => true  %>
 </p>
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
 <%= form_tag %>

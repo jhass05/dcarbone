@@ -1,10 +1,10 @@
 <%= form_remote_tag :update => "list_best_sellers", :url => {:action => 'the_best_sellers'} %>
 <div id="left">
-  <h1>Los productos mas Vendidos</h1>
+  <h1>Los Productos Mas Vendidos</h1>
   <ul class="navigation secondary">
-    <li><a href="/admin/orders/list/">Regresar a lista de reportes</a></li>
+    <li><a href="/admin/orders/list/">Regresar A Lista De Reportes</a></li>
   </ul>
-<h3>Seleccione un rango de fechas</h3>
+<h3>Seleccione Un Rango De Fechas</h3>
 <p>
 	<%= make_label('Fecha Inicio') %>
 	<%= date_select :date_begin,'', :use_month_numbers => true  %>
