@@ -1,0 +1,22 @@
+<table class="list" cellpadding="0" cellspacing="0">
+    <colgroup>     
+      <col style="width:150px;" />
+      <col style="width:110px;" />
+      <col style="width:60px;" />
+      <col style="width:60px;" />
+    </colgroup>
+    <tr>
+      <th>Nombre</th>
+      <th class="numeric">Precio</th>
+      <th class="numeric">Fecha</th>
+    </tr>
+  
+  <%   for product_sold in @products_sold   %>
+    <tr class="<%= alternate %>">
+      <td><%= product_sold.product %></td>
+      <td class="numeric"><%= product_sold.price %></td>
+      <td><%= product_sold.create_at %></td>  
+    </tr>
+    <% end %>
+ 
+  </table>

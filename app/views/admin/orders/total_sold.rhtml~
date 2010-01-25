@@ -13,7 +13,10 @@
 			</tr>
                 <% for best_seller in @best_sellers %>
 			<tr class="<%= alternate %>">
-				<td><%= best_seller.product %></td>
+				<td><%= link_to_remote h(best_seller.product), 
+                                           :url => {:action => 'show_products', :id => best_seller.product },
+                                           :update => 'total_solds' 
+                                            %></td>
                                 <td class="numeric"><%= best_seller.price %></td>			
 				<td class="numeric"><%= best_seller.quantity%></td>
                                 <td class="numeric"><%= best_seller.price * best_seller.quantity.to_f %></td>
@@ -24,7 +27,7 @@
 				<th></th>
 				<th></th>
 				<th class="numeric">TOTAL:</th>
-			        <th><%= @total %> </th>
+			        <th class="numeric"><%= @total %> </th>
 			</tr>
   
 </table>

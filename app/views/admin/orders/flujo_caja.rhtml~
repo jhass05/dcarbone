@@ -2,16 +2,16 @@
 <div id="left">
   <h1>Flujo de caja</h1>
   <ul class="navigation secondary">
-    <li><a href="/admin/orders/list/">Regresar a lista de productos</a></li>
+    <li><a href="/admin/orders/list/">Regresar A La Lista De Reportes</a></li>
   </ul>
 <h3>Seleccione un rango de fechas</h3>
 <p>
 	<%= make_label('Fecha Inicio') %>
-	<%= date_select :date_1,'', :use_month_numbers => true  %>
+	<%= date_select :date_begin,'', :use_month_numbers => true  %>
 </p>
 <p>
 	<%= make_label('Fecha Fin') %>
-	<%= date_select :date_2,'', :use_month_numbers => true  %>
+	<%= date_select :date_end,'', :use_month_numbers => true  %>
 </p>
 <%= submit_tag "Generar Reporte", :class => 'button hundredfifty' %>
 <%= form_tag %>
