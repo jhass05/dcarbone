@@ -30,8 +30,12 @@
     <tr class="<%= alternate %>">
       <td><%= link_to(h(insumo.name), :action => 'edit', :id => insumo) %></td>
       <td><%= insumo.date_ingress.to_s(:db) %></td>
-      <td class="numeric"><%= sub_number_to_currency(insumo.price)+"/"+@insumo.unit %></td>  
-      <td class="numeric"><%= insumo.quantity %></td>   
+      <% if insumo.unit.empty? %>   
+        <td class="numeric"><%= sub_number_to_currency(insumo.price) %></td> 
+      <% else %>
+        <td class="numeric"><%= sub_number_to_currency(insumo.price)+"/"+insumo.unit %></td>
+      <% end %>
+        <td class="numeric"><%= sub_number_to_currency(insumo.quantity)%></td>  
     </tr>
     <% end %>
   <% else %>

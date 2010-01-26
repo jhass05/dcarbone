@@ -14,7 +14,7 @@ class Admin::InsumosController < Admin::BaseController
       :page => params[:page],
       :per_page => 30
     )
-    @fecha_hora = @insumos.date_ingress
+   
   end
  
   def new

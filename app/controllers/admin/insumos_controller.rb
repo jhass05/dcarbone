@@ -42,7 +42,9 @@ class Admin::InsumosController < Admin::BaseController
       @insumo = Insumo.new
     end
     @insumo.attributes = params[:insumo]      
-    @insumo.save
+    if @insumo.save
+      flash[:notice] = "El Insumo '#{@insumo.name}' Fue Guardado."
+    end
     render :action => 'edit' and return			
   end
 
