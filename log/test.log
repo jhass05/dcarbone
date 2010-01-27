@@ -1,0 +1,22 @@
+Attempting to copy plugin assets from '/home/jhass/Sites/carbonazo/vendor/plugins/substruct/assets' to '/home/jhass/Sites/carbonazo/public/plugin_assets'
+checking plugin 'engines' for 'application_helper'
+checking plugin 'active_merchant' for 'application_helper'
+checking plugin 'acts_as_tree' for 'application_helper'
+checking plugin 'ar_fixtures' for 'application_helper'
+checking plugin 'attachment_fu' for 'application_helper'
+checking plugin 'attachment_fu_fixtures' for 'application_helper'
+checking plugin 'substruct' for 'application_helper'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'application_helper'
+loading from application: application_helper
+checking plugin 'engines' for 'substruct_application_controller'
+checking plugin 'active_merchant' for 'substruct_application_controller'
+checking plugin 'acts_as_tree' for 'substruct_application_controller'
+checking plugin 'ar_fixtures' for 'substruct_application_controller'
+checking plugin 'attachment_fu' for 'substruct_application_controller'
+checking plugin 'attachment_fu_fixtures' for 'substruct_application_controller'
+checking plugin 'substruct' for 'substruct_application_controller'
+==> loading from plugin 'substruct'
+checking plugin 'will_paginate' for 'substruct_application_controller'
+loading from application: substruct_application_controller
+loading routes from /home/jhass/Sites/carbonazo/vendor/plugins/substruct/routes.rb

@@ -52,19 +52,7 @@
   </div>
   <br>            
   <div id="Price" class="price">0</div>
-      <% if flash[:notice] -%>
-	<div class="" id="flash" style="display:none;">
-		<p>
-			<%= flash[:notice] %>
-		</p>
-		<p>
-		<a href="#" class="action" onmousedown="new Effect.BlindUp($('flash'))">Close</a>
-		</p>
-	</div>
-	<script type="text/javascript">
-		 new Effect.BlindDown($("flash"));
-	</script>
-<% end %>
+
       <div class="form_block">                
        
         <div id='search_nit'>

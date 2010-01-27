@@ -34,12 +34,10 @@ class StoreController < ApplicationController
   #   @@action_after_checkout = 'finish_order'
   @@action_after_checkout = 'select_shipping_method'
   @@total = 0  
-  @@a = []
+  @@pedidos = []
    
-
   def initialize
-      @total_price = 0
-      
+      @total_price = 0   
   end
    
   # Our simple store index
@@ -55,7 +53,6 @@ class StoreController < ApplicationController
       :page => params[:page],
       :per_page => 12
     )
-    
     @@total = 0 
   end
   
@@ -70,7 +67,7 @@ class StoreController < ApplicationController
     @title = @product.name
     @price = @product.price
     ped = {'product' => @title, 'price' => @price}
-    @@a << ped
+    @@pedidos << ped
     @@price = @price
     @@total = @@total + @price
     @images = @product.images.find(:all)
@@ -80,15 +77,13 @@ class StoreController < ApplicationController
       :order => 'name ASC',
       :conditions => 'quantity > 0'
     )
-    
     render :partial => 'pedido'
-    
   end
   
   def replacer_pedido
        @@total = @@total - @@price 
        @total_price = @@total
-       @@a.pop
+       @@pedidos.pop
        render :partial => 'replacer_pedido'  
   end  
 
@@ -119,9 +114,7 @@ class StoreController < ApplicationController
         @buyer.phone = params[:phone]   
         @buyer.save
       
-     
       render :partial => 'msj_customer'
-
   end
 
   def close_sale
@@ -230,11 +223,6 @@ class StoreController < ApplicationController
       :conditions => 'quantity > 0'
     )
   end
-  
-
-
-  
-  
   
   # Shows shopping cart in pop-up window.
   #

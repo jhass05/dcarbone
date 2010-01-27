@@ -1,5 +1,5 @@
 <!--INICIO PEDIDO-->
-<div id="<%= Time.new%>">
+<div id="<%= rand(1000) %>">
 <table>
 	<tr>
 		<td style= padding-left:4px;>
@@ -12,11 +12,11 @@
 				<span class= money ><%= @price%> </span>
 			</label>
 		</td>
-                <span class= money><%= @total_price%></span>
+           
 		<td style= padding-left:4px> 
 		    <label class= inline >
 				<span class= money><%= link_to_remote image_tag('delete.png'),
-                                                                      :update => Time.new,
+                                                                      :update => rand(1000),
 				                                      :url => {:action => :replacer_pedido}%>
 				</span>
 			</label>
