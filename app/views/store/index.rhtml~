@@ -46,9 +46,9 @@
 
   <span id="DisplayDiv"></span>
   
-  <div class="price"> <%= link_to_remote("Total", :controller => 'store',
+  <div class="price"> <%= link_to_remote "Total", :controller => 'store',
                                  :url => {:action => :price},
-                                 :update=> 'Price')%>
+                                 :update=> 'Price' %>
   </div>
   <br>            
   <div id="Price" class="price">0</div>
@@ -61,11 +61,16 @@
          
       </div>
         <p>   	
-        <%= link_to 'Terminar Pedido', {:controller => 'store', :action => 'close_sale'}, 
-                                                                :class => 'action' %>         
+        <%= link_to_remote 'Terminar Pedido', :controller => 'store',
+                                              :url => {:action => 'close_sale'},
+                                              :update => 'Pedido',   
+                                              :class => 'action' %>         
         </p>
+        <div id='Pedido'></div> 
+   
+        <div class="line">&nbsp;</div>
         <%= link_to 'Nuevo Pedido', {:controller => 'store', :action => 'index'}, :class => 'action' %>
-    <div class="line">&nbsp;</div>
+    
 </div>
 
 <!--Fin Rigth-->

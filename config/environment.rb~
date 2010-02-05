@@ -21,7 +21,11 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
-
+    config.load_paths += %W( #{RAILS_ROOT}/vendor/REdCloth-4.2.2/lib )
+    config.load_paths += %W( #{RAILS_ROOT}/vendor/fastercsv-1.5.1/lib )
+    config.load_paths += %W( #{RAILS_ROOT}/vendor/mime-types-1.16/lib )
+    config.load_paths += %W( #{RAILS_ROOT}/vendor/mini_magick-1.2.5/lib )
+    config.load_paths += %W( #{RAILS_ROOT}/vendor/ezcrypto-0.7.2/lib )
 
   # Force all environments to use the same logger level 
   # (by default production uses :info, the others :debug)

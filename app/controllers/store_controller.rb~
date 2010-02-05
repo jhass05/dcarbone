@@ -8,7 +8,7 @@ class StoreController < ApplicationController
   
   before_filter :redirect_if_order_empty,
     :only => [
-      :checkout, :select_shipping_method, :view_shipping_method, :set_shipping_method,
+      :checkout, :select_shippisng_method, :view_shipping_method, :set_shipping_method,
       :confirm_order, :finish_order
     ]
 
@@ -57,7 +57,7 @@ class StoreController < ApplicationController
   end
   
   def pedido
-     
+    @id_rand = rand(1000) 
     @product = Product.find_by_code(params[:id])
     if !@product
       flash[:notice] = "Sorry, we couldn't find the product you were looking for"
@@ -118,17 +118,17 @@ class StoreController < ApplicationController
   end
 
   def close_sale
-     
-     while(@@a.empty? == false)  
+   
+     while(@@pedidos.empty? == false)  
         @sale = Sale.new
-        @x = @@a.pop
-        @sale.product = @x['product']
-        @sale.price   = @x['price']
+        @pedido = @@pedidos.pop     
+        @sale.product = @pedido['product']
+        @sale.price   = @pedido['price']
         @sale.save
      end
+     
      @@total = 0
-     flash[:notice] = "Se termino el pedido"
-     redirect_to '/store'
+     render :partial => '/store'
   end
   
       

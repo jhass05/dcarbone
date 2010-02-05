@@ -1,5 +1,12 @@
 == Welcome Carbonazo chicken sales
 
+- Install the following gems: 
+gem install RedCloth
+gem install fastercsv
+gem install mime-types
+gem install mini_magick
+gem install ezcrypto
+
 the database in called carbonazo_development
 after it, typed: rake substruct:db:bootstrap
 after this typed:  rake db:migrate
