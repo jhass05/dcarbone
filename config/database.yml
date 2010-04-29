@@ -17,7 +17,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: carbonazo_development
+  database: dcarbone_development
   username: root
   password: root
   socket: /var/run/mysqld/mysqld.sock
@@ -28,7 +28,7 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: substruct_test
+  database: dcarbone_test
   username: root
   password:
   socket: /tmp/mysql.sock
@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: substruct_production
+  database: dcarbone_production
   username: root
   password: 
   socket: /tmp/mysql.sock
