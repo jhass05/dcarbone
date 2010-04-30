@@ -1,1 +1,1 @@
-ayuda del sistema
+Descarguese el manual <%= button_to "Descargar", :controller => "help", :action=> "download" %>
